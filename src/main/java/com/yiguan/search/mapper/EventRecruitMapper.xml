@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yiguan.search.mapper.EventRecruitMapper" >
+  <resultMap id="BaseResultMap" type="com.yiguan.search.model.EventRecruit" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="euuid" property="euuid" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="salary" property="salary" jdbcType="VARCHAR" />
+    <result column="domain" property="domain" jdbcType="VARCHAR" />
+    <result column="education" property="education" jdbcType="VARCHAR" />
+    <result column="workexp" property="workexp" jdbcType="VARCHAR" />
+    <result column="source" property="source" jdbcType="VARCHAR" />
+    <result column="abs" property="abs" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Example_Where_Clause_forPage" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Group_Contact_List" >
+    <choose >
+      <when test="groupConcatList!=null and groupByClause != null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="groupConcatList" item="concat" separator="," >
+            ${concat}
+          </foreach>
+        </trim>
+        ,
+      </when>
+    </choose>
+  </sql>
+  <sql id="Group_Contact_List_forPage" >
+    <choose >
+      <when test="example.groupConcatList!=null and example.groupByClause != null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="example.groupConcatList" item="concat" separator="," >
+            ${concat}
+          </foreach>
+        </trim>
+        ,
+      </when>
+    </choose>
+  </sql>
+  <sql id="Base_Column_List" >
+    <choose >
+      <when test="columnFilterList!=null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="columnFilterList" item="column" separator="," >
+            ${column}
+          </foreach>
+        </trim>
+      </when>
+      <otherwise >
+        id, euuid, name, title, salary, domain, education, workexp, source, abs
+      </otherwise>
+    </choose>
+  </sql>
+  <sql id="Base_Column_List_forPage" >
+    <choose >
+      <when test="example.columnFilterList!=null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="example.columnFilterList" item="column" separator="," >
+            ${column}
+          </foreach>
+        </trim>
+      </when>
+      <otherwise >
+        id, euuid, name, title, salary, domain, education, workexp, source, abs
+      </otherwise>
+    </choose>
+  </sql>
+  <sql id="Base_Column_List_all" >
+    id, euuid, name, title, salary, domain, education, workexp, source, abs
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.yiguan.search.model.EventRecruitExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Group_Contact_List" />
+    <include refid="Base_Column_List" />
+    from event_recruit
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="groupByClause != null" >
+      group by ${groupByClause}
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExampleForPage" resultMap="BaseResultMap" parameterType="map" >
+    select
+    <if test="example.distinct" >
+      distinct
+    </if>
+    <include refid="Group_Contact_List_forPage" />
+    <include refid="Base_Column_List_forPage" />
+    from event_recruit
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause_forPage" />
+    </if>
+    <if test="example.groupByClause != null" >
+      group by ${example.groupByClause}
+    </if>
+    <if test="example.orderByClause != null" >
+      order by ${example.orderByClause}
+    </if>
+    <if test="page.limit != -1" >
+       limit #{page.begin}, #{page.limit}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List_all" />
+    from event_recruit
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from event_recruit
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.yiguan.search.model.EventRecruitExample" >
+    delete from event_recruit
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.yiguan.search.model.EventRecruit" useGeneratedKeys="true" keyProperty="id" >
+    insert into event_recruit (id, euuid, name, 
+      title, salary, domain, 
+      education, workexp, source, 
+      abs)
+    values (#{id,jdbcType=INTEGER}, #{euuid,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{title,jdbcType=VARCHAR}, #{salary,jdbcType=VARCHAR}, #{domain,jdbcType=VARCHAR}, 
+      #{education,jdbcType=VARCHAR}, #{workexp,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, 
+      #{abs,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.yiguan.search.model.EventRecruit" useGeneratedKeys="true" keyProperty="id" >
+    insert into event_recruit
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="euuid != null" >
+        euuid,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="salary != null" >
+        salary,
+      </if>
+      <if test="domain != null" >
+        domain,
+      </if>
+      <if test="education != null" >
+        education,
+      </if>
+      <if test="workexp != null" >
+        workexp,
+      </if>
+      <if test="source != null" >
+        source,
+      </if>
+      <if test="abs != null" >
+        abs,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="euuid != null" >
+        #{euuid,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="salary != null" >
+        #{salary,jdbcType=VARCHAR},
+      </if>
+      <if test="domain != null" >
+        #{domain,jdbcType=VARCHAR},
+      </if>
+      <if test="education != null" >
+        #{education,jdbcType=VARCHAR},
+      </if>
+      <if test="workexp != null" >
+        #{workexp,jdbcType=VARCHAR},
+      </if>
+      <if test="source != null" >
+        #{source,jdbcType=VARCHAR},
+      </if>
+      <if test="abs != null" >
+        #{abs,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.yiguan.search.model.EventRecruitExample" resultType="java.lang.Integer" >
+    <choose >
+      <when test="groupByClause != null" >
+        select count(*) from ( select count(*) from event_recruit
+        <if test="_parameter != null" >
+          <include refid="Example_Where_Clause" />
+        </if>
+        group by ${groupByClause}) as temp
+      </when>
+      <otherwise >
+        select count(*) from event_recruit
+        <if test="_parameter != null" >
+          <include refid="Example_Where_Clause" />
+        </if>
+      </otherwise>
+    </choose>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update event_recruit
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.euuid != null" >
+        euuid = #{record.euuid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.name != null" >
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.title != null" >
+        title = #{record.title,jdbcType=VARCHAR},
+      </if>
+      <if test="record.salary != null" >
+        salary = #{record.salary,jdbcType=VARCHAR},
+      </if>
+      <if test="record.domain != null" >
+        domain = #{record.domain,jdbcType=VARCHAR},
+      </if>
+      <if test="record.education != null" >
+        education = #{record.education,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workexp != null" >
+        workexp = #{record.workexp,jdbcType=VARCHAR},
+      </if>
+      <if test="record.source != null" >
+        source = #{record.source,jdbcType=VARCHAR},
+      </if>
+      <if test="record.abs != null" >
+        abs = #{record.abs,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update event_recruit
+    set id = #{record.id,jdbcType=INTEGER},
+      euuid = #{record.euuid,jdbcType=VARCHAR},
+      name = #{record.name,jdbcType=VARCHAR},
+      title = #{record.title,jdbcType=VARCHAR},
+      salary = #{record.salary,jdbcType=VARCHAR},
+      domain = #{record.domain,jdbcType=VARCHAR},
+      education = #{record.education,jdbcType=VARCHAR},
+      workexp = #{record.workexp,jdbcType=VARCHAR},
+      source = #{record.source,jdbcType=VARCHAR},
+      abs = #{record.abs,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.yiguan.search.model.EventRecruit" >
+    update event_recruit
+    <set >
+      <if test="euuid != null" >
+        euuid = #{euuid,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="salary != null" >
+        salary = #{salary,jdbcType=VARCHAR},
+      </if>
+      <if test="domain != null" >
+        domain = #{domain,jdbcType=VARCHAR},
+      </if>
+      <if test="education != null" >
+        education = #{education,jdbcType=VARCHAR},
+      </if>
+      <if test="workexp != null" >
+        workexp = #{workexp,jdbcType=VARCHAR},
+      </if>
+      <if test="source != null" >
+        source = #{source,jdbcType=VARCHAR},
+      </if>
+      <if test="abs != null" >
+        abs = #{abs,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.yiguan.search.model.EventRecruit" >
+    update event_recruit
+    set euuid = #{euuid,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      salary = #{salary,jdbcType=VARCHAR},
+      domain = #{domain,jdbcType=VARCHAR},
+      education = #{education,jdbcType=VARCHAR},
+      workexp = #{workexp,jdbcType=VARCHAR},
+      source = #{source,jdbcType=VARCHAR},
+      abs = #{abs,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

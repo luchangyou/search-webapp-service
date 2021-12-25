@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="search-webapp-service:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="search-webapp-service.war">
+      <element id="artifact" artifact-name="search-webapp-service:war exploded" />
+    </root>
+  </artifact>
+</component>

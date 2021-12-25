@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0019)http://arborjs.org/ -->
+<html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+  <title>金桐网</title>
+  <meta name="description" content="金桐大数据关联展示平台">
+	<link href="online.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="site.css" type="text/css" charset="utf-8">
+
+<style>
+	.nodetext {
+
+	font-size: 12px ;
+	font-family: SimSun;
+	fill:#000000;
+
+
+}
+
+.linetext {
+	font-size: 12px ;
+	font-family: SimSun;
+	fill:#0000FF;
+	fill-opacity:0.0;
+}
+
+ 
+
+</style>
+</head>
+<body>
+
+
+  <div id="arbor">
+  <div id="nav">
+    <p style=" display: block;font-size:25pt;font-weight:300"><b>金桐大数据关联展示平台</b></p>
+  </div>
+  <div id="sitema" width="1300" height="465" >
+  
+
+		<script src="d3.v3.min.js" charset="utf-8"></script>  
+		
+		<script>
+
+		
+		var width = 1300;
+		var height = 465;
+		var img_w = 77;
+		var img_h = 90;
+		
+		var svg = d3.select("body").append("svg")
+								.attr("width",width)
+								.attr("height",height);
+		
+		
+		
+		d3.json("relation.json?r="+Math.random(),function(error,root){
+			
+			if( error ){
+				return console.log(error);
+			}
+			console.log(root);
+			
+			var force = d3.layout.force()
+							.nodes(root.nodes)
+							.links(root.edges)
+							.size([width,height])
+							.linkDistance(300)
+							.charge(-3000)
+							.start();
+							
+			var edges_line = svg.selectAll("line")
+								.data(root.edges)
+								.enter()
+								.append("line")
+								.style("stroke","#ccc")
+								.style("stroke-width",1);
+								
+			var edges_text = svg.selectAll(".linetext")
+								.data(root.edges)
+								.enter()
+								.append("text")
+								.attr("class","linetext")
+								.text(function(d){
+									return d.relation;
+								});
+			
+								
+			var nodes_img = svg.selectAll("image")
+								.data(root.nodes)
+								.enter()
+								.append("image")
+								.attr("width",function(d){
+									return d.width;
+								})
+								.attr("height",function(d){
+									return d.height;
+								})
+								.attr("xlink:href",function(d){
+									return d.image;
+								})
+
+								.on("mouseover",function(d,i){
+									//显示连接线上的文字
+									edges_text.style("fill-opacity",function(edge){
+										if( edge.source === d || edge.target === d ){
+											return 1.0;
+										}
+									});
+								})
+								.on("mouseout",function(d,i){
+									//隐去连接线上的文字
+									edges_text.style("fill-opacity",function(edge){
+										if( edge.source === d || edge.target === d ){
+											return 0.0;
+										}
+									});
+								})
+
+								.call(force.drag);
+			
+			var text_dx = -20;
+			var text_dy = 20;
+			
+			var nodes_text = svg.selectAll(".nodetext")
+								.data(root.nodes)
+								.enter()
+								.append("a")
+								.attr("xlink:href",function(d){
+									return d.href;
+								})
+								.append("text")
+								.attr("class","nodetext")
+								.attr("dx",text_dx)
+								.attr("dy",text_dy)
+								.text(function(d){
+									if(d.name.length <= 10){
+										return d.name;
+									}else{
+										return d.name.substring(0,10)+"....";
+									}
+									
+								});
+			
+								
+			force.on("tick", function(){
+				
+				//限制结点的边界
+				root.nodes.forEach(function(d,i){
+					d.x = d.x - img_w/2 < 0     ? img_w/2 : d.x ;
+					d.x = d.x + img_w/2 > width ? width - img_w/2 : d.x ;
+					d.y = d.y - img_h/2 < 0      ? img_h/2 : d.y ;
+					d.y = d.y + img_h/2 + text_dy > height ? height - img_h/2 - text_dy : d.y ;
+				});
+			
+				//更新连接线的位置
+				 edges_line.attr("x1",function(d){ return d.source.x; });
+				 edges_line.attr("y1",function(d){ return d.source.y; });
+				 edges_line.attr("x2",function(d){ return d.target.x; });
+				 edges_line.attr("y2",function(d){ return d.target.y; });
+				 
+				 //更新连接线上文字的位置
+				 edges_text.attr("x",function(d){ return (d.source.x + d.target.x) / 2 ; });
+				 edges_text.attr("y",function(d){ return (d.source.y + d.target.y) / 2 ; });
+				 
+				 
+				 //更新结点图片和文字
+				 nodes_img.attr("x",function(d){ return d.x - img_w/2; });
+				 nodes_img.attr("y",function(d){ return d.y - img_h/2; });
+				 
+				 nodes_text.attr("x",function(d){ return d.x });
+				 nodes_text.attr("y",function(d){ return d.y + img_w/2; });
+			});
+		});
+		  
+        </script>
+
+  </div>
+
+<div id="onService_panel" style="right: -132px; ">
+	<div class="onService_panel_s">
+		<div class="online_boxs">
+			<div class="boxs_m_l">
+				<div class="boxs_m_r">
+					<div class="box_m_m">
+						<div id="onlineList">
+							<em class="online_close" id="onlineClose" title="关闭"></em>
+							<div class="online_open" id="onlineOpen" style="display: block; "></div>
+							
+							<div id="online_tel_icon" class="online_icon">
+								<span class="pic"><img src="per2.png" height="60" width="60"></span>
+								<span class="name">人物关系</span>
+							</div>
+							
+							<div id="online_qq_icon" class="online_icon">
+								<span class="pic"><img src="org2.png"  height="60" width="60"></span>
+								<span class="name">组织关系</span>
+							</div>
+							
+							<div id="online_message_icon" class="online_icon">
+								<span class="pic"><img src="know2.png"  height="60" width="60"></span>
+								<span class="name">相关知识</span>
+							</div>
+							
+							<div id="online_email_icon" class="online_icon">
+								<span class="pic"><img src="event2.png"  height="60" width="60"></a></span>
+								<span class="name">相关事件</span>
+							</div>
+							
+							<div id="online_address_icon" class="online_icon">
+								<span class="pic"><img src="noti2.png"  height="60" width="60"></a></span>
+								<span class="name">相关公告</span>
+							</div>
+							
+							
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+	<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="online.js"></script>
+</body></html>

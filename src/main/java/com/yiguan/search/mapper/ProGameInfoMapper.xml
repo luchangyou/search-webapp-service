@@ -1,0 +1,986 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yiguan.search.mapper.ProGameInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.yiguan.search.model.ProGameInfo" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="gname" property="gname" jdbcType="VARCHAR" />
+    <result column="gename" property="gename" jdbcType="VARCHAR" />
+    <result column="logo" property="logo" jdbcType="VARCHAR" />
+    <result column="version" property="version" jdbcType="VARCHAR" />
+    <result column="language" property="language" jdbcType="VARCHAR" />
+    <result column="network_type" property="networkType" jdbcType="TINYINT" />
+    <result column="suitable_age" property="suitableAge" jdbcType="VARCHAR" />
+    <result column="issue_area" property="issueArea" jdbcType="LONGVARCHAR" />
+    <result column="publisher" property="publisher" jdbcType="VARCHAR" />
+    <result column="gstyle" property="gstyle" jdbcType="VARCHAR" />
+    <result column="gtags" property="gtags" jdbcType="LONGVARCHAR" />
+    <result column="picture" property="picture" jdbcType="LONGVARCHAR" />
+    <result column="viewpoint" property="viewpoint" jdbcType="VARCHAR" />
+    <result column="engine" property="engine" jdbcType="VARCHAR" />
+    <result column="grade" property="grade" jdbcType="VARCHAR" />
+    <result column="dpprogress" property="dpprogress" jdbcType="VARCHAR" />
+    <result column="gtheme" property="gtheme" jdbcType="VARCHAR" />
+    <result column="scale" property="scale" jdbcType="VARCHAR" />
+    <result column="pdemand" property="pdemand" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="VARCHAR" />
+    <result column="charge_mode" property="chargeMode" jdbcType="VARCHAR" />
+    <result column="develop_com" property="developCom" jdbcType="VARCHAR" />
+    <result column="g_desc" property="gDesc" jdbcType="LONGVARCHAR" />
+    <result column="ptime" property="ptime" jdbcType="TIMESTAMP" />
+    <result column="beta_time" property="betaTime" jdbcType="TIMESTAMP" />
+    <result column="test_time" property="testTime" jdbcType="TIMESTAMP" />
+    <result column="betatest_time" property="betatestTime" jdbcType="TIMESTAMP" />
+    <result column="set_time" property="setTime" jdbcType="TIMESTAMP" />
+    <result column="web" property="web" jdbcType="VARCHAR" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="source" property="source" jdbcType="VARCHAR" />
+    <result column="uuid" property="uuid" jdbcType="CHAR" />
+    <result column="ctime" property="ctime" jdbcType="TIMESTAMP" />
+    <result column="atime" property="atime" jdbcType="TIMESTAMP" />
+    <result column="gamespy" property="gamespy" jdbcType="VARCHAR" />
+    <result column="operator" property="operator" jdbcType="VARCHAR" />
+    <result column="films_time" property="filmsTime" jdbcType="VARCHAR" />
+    <result column="game_size" property="gameSize" jdbcType="VARCHAR" />
+    <result column="web_update_time" property="webUpdateTime" jdbcType="VARCHAR" />
+    <result column="download_link" property="downloadLink" jdbcType="VARCHAR" />
+    <result column="packagename" property="packagename" jdbcType="VARCHAR" />
+    <result column="game_update_time" property="gameUpdateTime" jdbcType="VARCHAR" />
+    <result column="familysharing" property="familysharing" jdbcType="VARCHAR" />
+    <result column="supportwatch" property="supportwatch" jdbcType="VARCHAR" />
+    <result column="supportwebsite" property="supportwebsite" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Example_Where_Clause_forPage" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Group_Contact_List" >
+    <choose >
+      <when test="groupConcatList!=null and groupByClause != null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="groupConcatList" item="concat" separator="," >
+            ${concat}
+          </foreach>
+        </trim>
+        ,
+      </when>
+    </choose>
+  </sql>
+  <sql id="Group_Contact_List_forPage" >
+    <choose >
+      <when test="example.groupConcatList!=null and example.groupByClause != null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="example.groupConcatList" item="concat" separator="," >
+            ${concat}
+          </foreach>
+        </trim>
+        ,
+      </when>
+    </choose>
+  </sql>
+  <sql id="Base_Column_List" >
+    <choose >
+      <when test="columnFilterList!=null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="columnFilterList" item="column" separator="," >
+            ${column}
+          </foreach>
+        </trim>
+      </when>
+      <otherwise >
+        id, gname, gename, logo, version, language, network_type, suitable_age, issue_area, 
+        publisher, gstyle, gtags, picture, viewpoint, engine, grade, dpprogress, gtheme, 
+        scale, pdemand, price, charge_mode, develop_com, g_desc, ptime, beta_time, test_time, 
+        betatest_time, set_time, web, url, source, uuid, ctime, atime, gamespy, operator, 
+        films_time, game_size, web_update_time, download_link, packagename, game_update_time, 
+        familysharing, supportwatch, supportwebsite
+      </otherwise>
+    </choose>
+  </sql>
+  <sql id="Base_Column_List_forPage" >
+    <choose >
+      <when test="example.columnFilterList!=null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="example.columnFilterList" item="column" separator="," >
+            ${column}
+          </foreach>
+        </trim>
+      </when>
+      <otherwise >
+        id, gname, gename, logo, version, language, network_type, suitable_age, issue_area, 
+        publisher, gstyle, gtags, picture, viewpoint, engine, grade, dpprogress, gtheme, 
+        scale, pdemand, price, charge_mode, develop_com, g_desc, ptime, beta_time, test_time, 
+        betatest_time, set_time, web, url, source, uuid, ctime, atime, gamespy, operator, 
+        films_time, game_size, web_update_time, download_link, packagename, game_update_time, 
+        familysharing, supportwatch, supportwebsite
+      </otherwise>
+    </choose>
+  </sql>
+  <sql id="Base_Column_List_all" >
+    id, gname, gename, logo, version, language, network_type, suitable_age, issue_area, 
+    publisher, gstyle, gtags, picture, viewpoint, engine, grade, dpprogress, gtheme, 
+    scale, pdemand, price, charge_mode, develop_com, g_desc, ptime, beta_time, test_time, 
+    betatest_time, set_time, web, url, source, uuid, ctime, atime, gamespy, operator, 
+    films_time, game_size, web_update_time, download_link, packagename, game_update_time, 
+    familysharing, supportwatch, supportwebsite
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.yiguan.search.model.ProGameInfoExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Group_Contact_List" />
+    <include refid="Base_Column_List" />
+    from pro_game_info
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="groupByClause != null" >
+      group by ${groupByClause}
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExampleForPage" resultMap="BaseResultMap" parameterType="map" >
+    select
+    <if test="example.distinct" >
+      distinct
+    </if>
+    <include refid="Group_Contact_List_forPage" />
+    <include refid="Base_Column_List_forPage" />
+    from pro_game_info
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause_forPage" />
+    </if>
+    <if test="example.groupByClause != null" >
+      group by ${example.groupByClause}
+    </if>
+    <if test="example.orderByClause != null" >
+      order by ${example.orderByClause}
+    </if>
+    <if test="page.limit != -1" >
+       limit #{page.begin}, #{page.limit}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List_all" />
+    from pro_game_info
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from pro_game_info
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.yiguan.search.model.ProGameInfoExample" >
+    delete from pro_game_info
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.yiguan.search.model.ProGameInfo" useGeneratedKeys="true" keyProperty="id" >
+    insert into pro_game_info (id, gname, gename, 
+      logo, version, language, 
+      network_type, suitable_age, issue_area, 
+      publisher, gstyle, gtags, 
+      picture, viewpoint, engine, 
+      grade, dpprogress, gtheme, 
+      scale, pdemand, price, 
+      charge_mode, develop_com, g_desc, 
+      ptime, beta_time, test_time, 
+      betatest_time, set_time, web, 
+      url, source, uuid, ctime, 
+      atime, gamespy, operator, 
+      films_time, game_size, web_update_time, 
+      download_link, packagename, game_update_time, 
+      familysharing, supportwatch, supportwebsite
+      )
+    values (#{id,jdbcType=BIGINT}, #{gname,jdbcType=VARCHAR}, #{gename,jdbcType=VARCHAR}, 
+      #{logo,jdbcType=VARCHAR}, #{version,jdbcType=VARCHAR}, #{language,jdbcType=VARCHAR}, 
+      #{networkType,jdbcType=TINYINT}, #{suitableAge,jdbcType=VARCHAR}, #{issueArea,jdbcType=LONGVARCHAR}, 
+      #{publisher,jdbcType=VARCHAR}, #{gstyle,jdbcType=VARCHAR}, #{gtags,jdbcType=LONGVARCHAR}, 
+      #{picture,jdbcType=LONGVARCHAR}, #{viewpoint,jdbcType=VARCHAR}, #{engine,jdbcType=VARCHAR}, 
+      #{grade,jdbcType=VARCHAR}, #{dpprogress,jdbcType=VARCHAR}, #{gtheme,jdbcType=VARCHAR}, 
+      #{scale,jdbcType=VARCHAR}, #{pdemand,jdbcType=VARCHAR}, #{price,jdbcType=VARCHAR}, 
+      #{chargeMode,jdbcType=VARCHAR}, #{developCom,jdbcType=VARCHAR}, #{gDesc,jdbcType=LONGVARCHAR}, 
+      #{ptime,jdbcType=TIMESTAMP}, #{betaTime,jdbcType=TIMESTAMP}, #{testTime,jdbcType=TIMESTAMP}, 
+      #{betatestTime,jdbcType=TIMESTAMP}, #{setTime,jdbcType=TIMESTAMP}, #{web,jdbcType=VARCHAR}, 
+      #{url,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{uuid,jdbcType=CHAR}, #{ctime,jdbcType=TIMESTAMP}, 
+      #{atime,jdbcType=TIMESTAMP}, #{gamespy,jdbcType=VARCHAR}, #{operator,jdbcType=VARCHAR}, 
+      #{filmsTime,jdbcType=VARCHAR}, #{gameSize,jdbcType=VARCHAR}, #{webUpdateTime,jdbcType=VARCHAR}, 
+      #{downloadLink,jdbcType=VARCHAR}, #{packagename,jdbcType=VARCHAR}, #{gameUpdateTime,jdbcType=VARCHAR}, 
+      #{familysharing,jdbcType=VARCHAR}, #{supportwatch,jdbcType=VARCHAR}, #{supportwebsite,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.yiguan.search.model.ProGameInfo" useGeneratedKeys="true" keyProperty="id" >
+    insert into pro_game_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="gname != null" >
+        gname,
+      </if>
+      <if test="gename != null" >
+        gename,
+      </if>
+      <if test="logo != null" >
+        logo,
+      </if>
+      <if test="version != null" >
+        version,
+      </if>
+      <if test="language != null" >
+        language,
+      </if>
+      <if test="networkType != null" >
+        network_type,
+      </if>
+      <if test="suitableAge != null" >
+        suitable_age,
+      </if>
+      <if test="issueArea != null" >
+        issue_area,
+      </if>
+      <if test="publisher != null" >
+        publisher,
+      </if>
+      <if test="gstyle != null" >
+        gstyle,
+      </if>
+      <if test="gtags != null" >
+        gtags,
+      </if>
+      <if test="picture != null" >
+        picture,
+      </if>
+      <if test="viewpoint != null" >
+        viewpoint,
+      </if>
+      <if test="engine != null" >
+        engine,
+      </if>
+      <if test="grade != null" >
+        grade,
+      </if>
+      <if test="dpprogress != null" >
+        dpprogress,
+      </if>
+      <if test="gtheme != null" >
+        gtheme,
+      </if>
+      <if test="scale != null" >
+        scale,
+      </if>
+      <if test="pdemand != null" >
+        pdemand,
+      </if>
+      <if test="price != null" >
+        price,
+      </if>
+      <if test="chargeMode != null" >
+        charge_mode,
+      </if>
+      <if test="developCom != null" >
+        develop_com,
+      </if>
+      <if test="gDesc != null" >
+        g_desc,
+      </if>
+      <if test="ptime != null" >
+        ptime,
+      </if>
+      <if test="betaTime != null" >
+        beta_time,
+      </if>
+      <if test="testTime != null" >
+        test_time,
+      </if>
+      <if test="betatestTime != null" >
+        betatest_time,
+      </if>
+      <if test="setTime != null" >
+        set_time,
+      </if>
+      <if test="web != null" >
+        web,
+      </if>
+      <if test="url != null" >
+        url,
+      </if>
+      <if test="source != null" >
+        source,
+      </if>
+      <if test="uuid != null" >
+        uuid,
+      </if>
+      <if test="ctime != null" >
+        ctime,
+      </if>
+      <if test="atime != null" >
+        atime,
+      </if>
+      <if test="gamespy != null" >
+        gamespy,
+      </if>
+      <if test="operator != null" >
+        operator,
+      </if>
+      <if test="filmsTime != null" >
+        films_time,
+      </if>
+      <if test="gameSize != null" >
+        game_size,
+      </if>
+      <if test="webUpdateTime != null" >
+        web_update_time,
+      </if>
+      <if test="downloadLink != null" >
+        download_link,
+      </if>
+      <if test="packagename != null" >
+        packagename,
+      </if>
+      <if test="gameUpdateTime != null" >
+        game_update_time,
+      </if>
+      <if test="familysharing != null" >
+        familysharing,
+      </if>
+      <if test="supportwatch != null" >
+        supportwatch,
+      </if>
+      <if test="supportwebsite != null" >
+        supportwebsite,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="gname != null" >
+        #{gname,jdbcType=VARCHAR},
+      </if>
+      <if test="gename != null" >
+        #{gename,jdbcType=VARCHAR},
+      </if>
+      <if test="logo != null" >
+        #{logo,jdbcType=VARCHAR},
+      </if>
+      <if test="version != null" >
+        #{version,jdbcType=VARCHAR},
+      </if>
+      <if test="language != null" >
+        #{language,jdbcType=VARCHAR},
+      </if>
+      <if test="networkType != null" >
+        #{networkType,jdbcType=TINYINT},
+      </if>
+      <if test="suitableAge != null" >
+        #{suitableAge,jdbcType=VARCHAR},
+      </if>
+      <if test="issueArea != null" >
+        #{issueArea,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="publisher != null" >
+        #{publisher,jdbcType=VARCHAR},
+      </if>
+      <if test="gstyle != null" >
+        #{gstyle,jdbcType=VARCHAR},
+      </if>
+      <if test="gtags != null" >
+        #{gtags,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="picture != null" >
+        #{picture,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="viewpoint != null" >
+        #{viewpoint,jdbcType=VARCHAR},
+      </if>
+      <if test="engine != null" >
+        #{engine,jdbcType=VARCHAR},
+      </if>
+      <if test="grade != null" >
+        #{grade,jdbcType=VARCHAR},
+      </if>
+      <if test="dpprogress != null" >
+        #{dpprogress,jdbcType=VARCHAR},
+      </if>
+      <if test="gtheme != null" >
+        #{gtheme,jdbcType=VARCHAR},
+      </if>
+      <if test="scale != null" >
+        #{scale,jdbcType=VARCHAR},
+      </if>
+      <if test="pdemand != null" >
+        #{pdemand,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=VARCHAR},
+      </if>
+      <if test="chargeMode != null" >
+        #{chargeMode,jdbcType=VARCHAR},
+      </if>
+      <if test="developCom != null" >
+        #{developCom,jdbcType=VARCHAR},
+      </if>
+      <if test="gDesc != null" >
+        #{gDesc,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="ptime != null" >
+        #{ptime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="betaTime != null" >
+        #{betaTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="testTime != null" >
+        #{testTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="betatestTime != null" >
+        #{betatestTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="setTime != null" >
+        #{setTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="web != null" >
+        #{web,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null" >
+        #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="source != null" >
+        #{source,jdbcType=VARCHAR},
+      </if>
+      <if test="uuid != null" >
+        #{uuid,jdbcType=CHAR},
+      </if>
+      <if test="ctime != null" >
+        #{ctime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="atime != null" >
+        #{atime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gamespy != null" >
+        #{gamespy,jdbcType=VARCHAR},
+      </if>
+      <if test="operator != null" >
+        #{operator,jdbcType=VARCHAR},
+      </if>
+      <if test="filmsTime != null" >
+        #{filmsTime,jdbcType=VARCHAR},
+      </if>
+      <if test="gameSize != null" >
+        #{gameSize,jdbcType=VARCHAR},
+      </if>
+      <if test="webUpdateTime != null" >
+        #{webUpdateTime,jdbcType=VARCHAR},
+      </if>
+      <if test="downloadLink != null" >
+        #{downloadLink,jdbcType=VARCHAR},
+      </if>
+      <if test="packagename != null" >
+        #{packagename,jdbcType=VARCHAR},
+      </if>
+      <if test="gameUpdateTime != null" >
+        #{gameUpdateTime,jdbcType=VARCHAR},
+      </if>
+      <if test="familysharing != null" >
+        #{familysharing,jdbcType=VARCHAR},
+      </if>
+      <if test="supportwatch != null" >
+        #{supportwatch,jdbcType=VARCHAR},
+      </if>
+      <if test="supportwebsite != null" >
+        #{supportwebsite,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.yiguan.search.model.ProGameInfoExample" resultType="java.lang.Integer" >
+    <choose >
+      <when test="groupByClause != null" >
+        select count(*) from ( select count(*) from pro_game_info
+        <if test="_parameter != null" >
+          <include refid="Example_Where_Clause" />
+        </if>
+        group by ${groupByClause}) as temp
+      </when>
+      <otherwise >
+        select count(*) from pro_game_info
+        <if test="_parameter != null" >
+          <include refid="Example_Where_Clause" />
+        </if>
+      </otherwise>
+    </choose>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update pro_game_info
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.gname != null" >
+        gname = #{record.gname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.gename != null" >
+        gename = #{record.gename,jdbcType=VARCHAR},
+      </if>
+      <if test="record.logo != null" >
+        logo = #{record.logo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.version != null" >
+        version = #{record.version,jdbcType=VARCHAR},
+      </if>
+      <if test="record.language != null" >
+        language = #{record.language,jdbcType=VARCHAR},
+      </if>
+      <if test="record.networkType != null" >
+        network_type = #{record.networkType,jdbcType=TINYINT},
+      </if>
+      <if test="record.suitableAge != null" >
+        suitable_age = #{record.suitableAge,jdbcType=VARCHAR},
+      </if>
+      <if test="record.issueArea != null" >
+        issue_area = #{record.issueArea,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.publisher != null" >
+        publisher = #{record.publisher,jdbcType=VARCHAR},
+      </if>
+      <if test="record.gstyle != null" >
+        gstyle = #{record.gstyle,jdbcType=VARCHAR},
+      </if>
+      <if test="record.gtags != null" >
+        gtags = #{record.gtags,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.picture != null" >
+        picture = #{record.picture,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.viewpoint != null" >
+        viewpoint = #{record.viewpoint,jdbcType=VARCHAR},
+      </if>
+      <if test="record.engine != null" >
+        engine = #{record.engine,jdbcType=VARCHAR},
+      </if>
+      <if test="record.grade != null" >
+        grade = #{record.grade,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dpprogress != null" >
+        dpprogress = #{record.dpprogress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.gtheme != null" >
+        gtheme = #{record.gtheme,jdbcType=VARCHAR},
+      </if>
+      <if test="record.scale != null" >
+        scale = #{record.scale,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pdemand != null" >
+        pdemand = #{record.pdemand,jdbcType=VARCHAR},
+      </if>
+      <if test="record.price != null" >
+        price = #{record.price,jdbcType=VARCHAR},
+      </if>
+      <if test="record.chargeMode != null" >
+        charge_mode = #{record.chargeMode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.developCom != null" >
+        develop_com = #{record.developCom,jdbcType=VARCHAR},
+      </if>
+      <if test="record.gDesc != null" >
+        g_desc = #{record.gDesc,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.ptime != null" >
+        ptime = #{record.ptime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.betaTime != null" >
+        beta_time = #{record.betaTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.testTime != null" >
+        test_time = #{record.testTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.betatestTime != null" >
+        betatest_time = #{record.betatestTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.setTime != null" >
+        set_time = #{record.setTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.web != null" >
+        web = #{record.web,jdbcType=VARCHAR},
+      </if>
+      <if test="record.url != null" >
+        url = #{record.url,jdbcType=VARCHAR},
+      </if>
+      <if test="record.source != null" >
+        source = #{record.source,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uuid != null" >
+        uuid = #{record.uuid,jdbcType=CHAR},
+      </if>
+      <if test="record.ctime != null" >
+        ctime = #{record.ctime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.atime != null" >
+        atime = #{record.atime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.gamespy != null" >
+        gamespy = #{record.gamespy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.operator != null" >
+        operator = #{record.operator,jdbcType=VARCHAR},
+      </if>
+      <if test="record.filmsTime != null" >
+        films_time = #{record.filmsTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.gameSize != null" >
+        game_size = #{record.gameSize,jdbcType=VARCHAR},
+      </if>
+      <if test="record.webUpdateTime != null" >
+        web_update_time = #{record.webUpdateTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.downloadLink != null" >
+        download_link = #{record.downloadLink,jdbcType=VARCHAR},
+      </if>
+      <if test="record.packagename != null" >
+        packagename = #{record.packagename,jdbcType=VARCHAR},
+      </if>
+      <if test="record.gameUpdateTime != null" >
+        game_update_time = #{record.gameUpdateTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.familysharing != null" >
+        familysharing = #{record.familysharing,jdbcType=VARCHAR},
+      </if>
+      <if test="record.supportwatch != null" >
+        supportwatch = #{record.supportwatch,jdbcType=VARCHAR},
+      </if>
+      <if test="record.supportwebsite != null" >
+        supportwebsite = #{record.supportwebsite,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update pro_game_info
+    set id = #{record.id,jdbcType=BIGINT},
+      gname = #{record.gname,jdbcType=VARCHAR},
+      gename = #{record.gename,jdbcType=VARCHAR},
+      logo = #{record.logo,jdbcType=VARCHAR},
+      version = #{record.version,jdbcType=VARCHAR},
+      language = #{record.language,jdbcType=VARCHAR},
+      network_type = #{record.networkType,jdbcType=TINYINT},
+      suitable_age = #{record.suitableAge,jdbcType=VARCHAR},
+      issue_area = #{record.issueArea,jdbcType=LONGVARCHAR},
+      publisher = #{record.publisher,jdbcType=VARCHAR},
+      gstyle = #{record.gstyle,jdbcType=VARCHAR},
+      gtags = #{record.gtags,jdbcType=LONGVARCHAR},
+      picture = #{record.picture,jdbcType=LONGVARCHAR},
+      viewpoint = #{record.viewpoint,jdbcType=VARCHAR},
+      engine = #{record.engine,jdbcType=VARCHAR},
+      grade = #{record.grade,jdbcType=VARCHAR},
+      dpprogress = #{record.dpprogress,jdbcType=VARCHAR},
+      gtheme = #{record.gtheme,jdbcType=VARCHAR},
+      scale = #{record.scale,jdbcType=VARCHAR},
+      pdemand = #{record.pdemand,jdbcType=VARCHAR},
+      price = #{record.price,jdbcType=VARCHAR},
+      charge_mode = #{record.chargeMode,jdbcType=VARCHAR},
+      develop_com = #{record.developCom,jdbcType=VARCHAR},
+      g_desc = #{record.gDesc,jdbcType=LONGVARCHAR},
+      ptime = #{record.ptime,jdbcType=TIMESTAMP},
+      beta_time = #{record.betaTime,jdbcType=TIMESTAMP},
+      test_time = #{record.testTime,jdbcType=TIMESTAMP},
+      betatest_time = #{record.betatestTime,jdbcType=TIMESTAMP},
+      set_time = #{record.setTime,jdbcType=TIMESTAMP},
+      web = #{record.web,jdbcType=VARCHAR},
+      url = #{record.url,jdbcType=VARCHAR},
+      source = #{record.source,jdbcType=VARCHAR},
+      uuid = #{record.uuid,jdbcType=CHAR},
+      ctime = #{record.ctime,jdbcType=TIMESTAMP},
+      atime = #{record.atime,jdbcType=TIMESTAMP},
+      gamespy = #{record.gamespy,jdbcType=VARCHAR},
+      operator = #{record.operator,jdbcType=VARCHAR},
+      films_time = #{record.filmsTime,jdbcType=VARCHAR},
+      game_size = #{record.gameSize,jdbcType=VARCHAR},
+      web_update_time = #{record.webUpdateTime,jdbcType=VARCHAR},
+      download_link = #{record.downloadLink,jdbcType=VARCHAR},
+      packagename = #{record.packagename,jdbcType=VARCHAR},
+      game_update_time = #{record.gameUpdateTime,jdbcType=VARCHAR},
+      familysharing = #{record.familysharing,jdbcType=VARCHAR},
+      supportwatch = #{record.supportwatch,jdbcType=VARCHAR},
+      supportwebsite = #{record.supportwebsite,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.yiguan.search.model.ProGameInfo" >
+    update pro_game_info
+    <set >
+      <if test="gname != null" >
+        gname = #{gname,jdbcType=VARCHAR},
+      </if>
+      <if test="gename != null" >
+        gename = #{gename,jdbcType=VARCHAR},
+      </if>
+      <if test="logo != null" >
+        logo = #{logo,jdbcType=VARCHAR},
+      </if>
+      <if test="version != null" >
+        version = #{version,jdbcType=VARCHAR},
+      </if>
+      <if test="language != null" >
+        language = #{language,jdbcType=VARCHAR},
+      </if>
+      <if test="networkType != null" >
+        network_type = #{networkType,jdbcType=TINYINT},
+      </if>
+      <if test="suitableAge != null" >
+        suitable_age = #{suitableAge,jdbcType=VARCHAR},
+      </if>
+      <if test="issueArea != null" >
+        issue_area = #{issueArea,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="publisher != null" >
+        publisher = #{publisher,jdbcType=VARCHAR},
+      </if>
+      <if test="gstyle != null" >
+        gstyle = #{gstyle,jdbcType=VARCHAR},
+      </if>
+      <if test="gtags != null" >
+        gtags = #{gtags,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="picture != null" >
+        picture = #{picture,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="viewpoint != null" >
+        viewpoint = #{viewpoint,jdbcType=VARCHAR},
+      </if>
+      <if test="engine != null" >
+        engine = #{engine,jdbcType=VARCHAR},
+      </if>
+      <if test="grade != null" >
+        grade = #{grade,jdbcType=VARCHAR},
+      </if>
+      <if test="dpprogress != null" >
+        dpprogress = #{dpprogress,jdbcType=VARCHAR},
+      </if>
+      <if test="gtheme != null" >
+        gtheme = #{gtheme,jdbcType=VARCHAR},
+      </if>
+      <if test="scale != null" >
+        scale = #{scale,jdbcType=VARCHAR},
+      </if>
+      <if test="pdemand != null" >
+        pdemand = #{pdemand,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        price = #{price,jdbcType=VARCHAR},
+      </if>
+      <if test="chargeMode != null" >
+        charge_mode = #{chargeMode,jdbcType=VARCHAR},
+      </if>
+      <if test="developCom != null" >
+        develop_com = #{developCom,jdbcType=VARCHAR},
+      </if>
+      <if test="gDesc != null" >
+        g_desc = #{gDesc,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="ptime != null" >
+        ptime = #{ptime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="betaTime != null" >
+        beta_time = #{betaTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="testTime != null" >
+        test_time = #{testTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="betatestTime != null" >
+        betatest_time = #{betatestTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="setTime != null" >
+        set_time = #{setTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="web != null" >
+        web = #{web,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null" >
+        url = #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="source != null" >
+        source = #{source,jdbcType=VARCHAR},
+      </if>
+      <if test="uuid != null" >
+        uuid = #{uuid,jdbcType=CHAR},
+      </if>
+      <if test="ctime != null" >
+        ctime = #{ctime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="atime != null" >
+        atime = #{atime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gamespy != null" >
+        gamespy = #{gamespy,jdbcType=VARCHAR},
+      </if>
+      <if test="operator != null" >
+        operator = #{operator,jdbcType=VARCHAR},
+      </if>
+      <if test="filmsTime != null" >
+        films_time = #{filmsTime,jdbcType=VARCHAR},
+      </if>
+      <if test="gameSize != null" >
+        game_size = #{gameSize,jdbcType=VARCHAR},
+      </if>
+      <if test="webUpdateTime != null" >
+        web_update_time = #{webUpdateTime,jdbcType=VARCHAR},
+      </if>
+      <if test="downloadLink != null" >
+        download_link = #{downloadLink,jdbcType=VARCHAR},
+      </if>
+      <if test="packagename != null" >
+        packagename = #{packagename,jdbcType=VARCHAR},
+      </if>
+      <if test="gameUpdateTime != null" >
+        game_update_time = #{gameUpdateTime,jdbcType=VARCHAR},
+      </if>
+      <if test="familysharing != null" >
+        familysharing = #{familysharing,jdbcType=VARCHAR},
+      </if>
+      <if test="supportwatch != null" >
+        supportwatch = #{supportwatch,jdbcType=VARCHAR},
+      </if>
+      <if test="supportwebsite != null" >
+        supportwebsite = #{supportwebsite,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.yiguan.search.model.ProGameInfo" >
+    update pro_game_info
+    set gname = #{gname,jdbcType=VARCHAR},
+      gename = #{gename,jdbcType=VARCHAR},
+      logo = #{logo,jdbcType=VARCHAR},
+      version = #{version,jdbcType=VARCHAR},
+      language = #{language,jdbcType=VARCHAR},
+      network_type = #{networkType,jdbcType=TINYINT},
+      suitable_age = #{suitableAge,jdbcType=VARCHAR},
+      issue_area = #{issueArea,jdbcType=LONGVARCHAR},
+      publisher = #{publisher,jdbcType=VARCHAR},
+      gstyle = #{gstyle,jdbcType=VARCHAR},
+      gtags = #{gtags,jdbcType=LONGVARCHAR},
+      picture = #{picture,jdbcType=LONGVARCHAR},
+      viewpoint = #{viewpoint,jdbcType=VARCHAR},
+      engine = #{engine,jdbcType=VARCHAR},
+      grade = #{grade,jdbcType=VARCHAR},
+      dpprogress = #{dpprogress,jdbcType=VARCHAR},
+      gtheme = #{gtheme,jdbcType=VARCHAR},
+      scale = #{scale,jdbcType=VARCHAR},
+      pdemand = #{pdemand,jdbcType=VARCHAR},
+      price = #{price,jdbcType=VARCHAR},
+      charge_mode = #{chargeMode,jdbcType=VARCHAR},
+      develop_com = #{developCom,jdbcType=VARCHAR},
+      g_desc = #{gDesc,jdbcType=LONGVARCHAR},
+      ptime = #{ptime,jdbcType=TIMESTAMP},
+      beta_time = #{betaTime,jdbcType=TIMESTAMP},
+      test_time = #{testTime,jdbcType=TIMESTAMP},
+      betatest_time = #{betatestTime,jdbcType=TIMESTAMP},
+      set_time = #{setTime,jdbcType=TIMESTAMP},
+      web = #{web,jdbcType=VARCHAR},
+      url = #{url,jdbcType=VARCHAR},
+      source = #{source,jdbcType=VARCHAR},
+      uuid = #{uuid,jdbcType=CHAR},
+      ctime = #{ctime,jdbcType=TIMESTAMP},
+      atime = #{atime,jdbcType=TIMESTAMP},
+      gamespy = #{gamespy,jdbcType=VARCHAR},
+      operator = #{operator,jdbcType=VARCHAR},
+      films_time = #{filmsTime,jdbcType=VARCHAR},
+      game_size = #{gameSize,jdbcType=VARCHAR},
+      web_update_time = #{webUpdateTime,jdbcType=VARCHAR},
+      download_link = #{downloadLink,jdbcType=VARCHAR},
+      packagename = #{packagename,jdbcType=VARCHAR},
+      game_update_time = #{gameUpdateTime,jdbcType=VARCHAR},
+      familysharing = #{familysharing,jdbcType=VARCHAR},
+      supportwatch = #{supportwatch,jdbcType=VARCHAR},
+      supportwebsite = #{supportwebsite,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

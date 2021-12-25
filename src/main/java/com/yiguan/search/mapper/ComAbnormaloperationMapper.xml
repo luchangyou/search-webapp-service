@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yiguan.search.mapper.ComAbnormaloperationMapper" >
+  <resultMap id="BaseResultMap" type="com.yiguan.search.model.ComAbnormaloperation" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="bid" property="bid" jdbcType="INTEGER" />
+    <result column="uuid" property="uuid" jdbcType="VARCHAR" />
+    <result column="inclusion_date" property="inclusionDate" jdbcType="VARCHAR" />
+    <result column="inclusion_reason" property="inclusionReason" jdbcType="LONGVARCHAR" />
+    <result column="decision_organ" property="decisionOrgan" jdbcType="VARCHAR" />
+    <result column="remove_date" property="removeDate" jdbcType="VARCHAR" />
+    <result column="remove_reason" property="removeReason" jdbcType="LONGVARCHAR" />
+    <result column="remove_organ" property="removeOrgan" jdbcType="VARCHAR" />
+    <result column="ctime" property="ctime" jdbcType="TIMESTAMP" />
+    <result column="atime" property="atime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Example_Where_Clause_forPage" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Group_Contact_List" >
+    <choose >
+      <when test="groupConcatList!=null and groupByClause != null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="groupConcatList" item="concat" separator="," >
+            ${concat}
+          </foreach>
+        </trim>
+        ,
+      </when>
+    </choose>
+  </sql>
+  <sql id="Group_Contact_List_forPage" >
+    <choose >
+      <when test="example.groupConcatList!=null and example.groupByClause != null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="example.groupConcatList" item="concat" separator="," >
+            ${concat}
+          </foreach>
+        </trim>
+        ,
+      </when>
+    </choose>
+  </sql>
+  <sql id="Base_Column_List" >
+    <choose >
+      <when test="columnFilterList!=null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="columnFilterList" item="column" separator="," >
+            ${column}
+          </foreach>
+        </trim>
+      </when>
+      <otherwise >
+        id, bid, uuid, inclusion_date, inclusion_reason, decision_organ, remove_date, remove_reason, 
+        remove_organ, ctime, atime
+      </otherwise>
+    </choose>
+  </sql>
+  <sql id="Base_Column_List_forPage" >
+    <choose >
+      <when test="example.columnFilterList!=null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="example.columnFilterList" item="column" separator="," >
+            ${column}
+          </foreach>
+        </trim>
+      </when>
+      <otherwise >
+        id, bid, uuid, inclusion_date, inclusion_reason, decision_organ, remove_date, remove_reason, 
+        remove_organ, ctime, atime
+      </otherwise>
+    </choose>
+  </sql>
+  <sql id="Base_Column_List_all" >
+    id, bid, uuid, inclusion_date, inclusion_reason, decision_organ, remove_date, remove_reason, 
+    remove_organ, ctime, atime
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.yiguan.search.model.ComAbnormaloperationExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Group_Contact_List" />
+    <include refid="Base_Column_List" />
+    from com_abnormaloperation
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="groupByClause != null" >
+      group by ${groupByClause}
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExampleForPage" resultMap="BaseResultMap" parameterType="map" >
+    select
+    <if test="example.distinct" >
+      distinct
+    </if>
+    <include refid="Group_Contact_List_forPage" />
+    <include refid="Base_Column_List_forPage" />
+    from com_abnormaloperation
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause_forPage" />
+    </if>
+    <if test="example.groupByClause != null" >
+      group by ${example.groupByClause}
+    </if>
+    <if test="example.orderByClause != null" >
+      order by ${example.orderByClause}
+    </if>
+    <if test="page.limit != -1" >
+       limit #{page.begin}, #{page.limit}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List_all" />
+    from com_abnormaloperation
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from com_abnormaloperation
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.yiguan.search.model.ComAbnormaloperationExample" >
+    delete from com_abnormaloperation
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.yiguan.search.model.ComAbnormaloperation" useGeneratedKeys="true" keyProperty="id" >
+    insert into com_abnormaloperation (id, bid, uuid, 
+      inclusion_date, inclusion_reason, decision_organ, 
+      remove_date, remove_reason, remove_organ, 
+      ctime, atime)
+    values (#{id,jdbcType=INTEGER}, #{bid,jdbcType=INTEGER}, #{uuid,jdbcType=VARCHAR}, 
+      #{inclusionDate,jdbcType=VARCHAR}, #{inclusionReason,jdbcType=LONGVARCHAR}, #{decisionOrgan,jdbcType=VARCHAR}, 
+      #{removeDate,jdbcType=VARCHAR}, #{removeReason,jdbcType=LONGVARCHAR}, #{removeOrgan,jdbcType=VARCHAR}, 
+      #{ctime,jdbcType=TIMESTAMP}, #{atime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.yiguan.search.model.ComAbnormaloperation" useGeneratedKeys="true" keyProperty="id" >
+    insert into com_abnormaloperation
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="bid != null" >
+        bid,
+      </if>
+      <if test="uuid != null" >
+        uuid,
+      </if>
+      <if test="inclusionDate != null" >
+        inclusion_date,
+      </if>
+      <if test="inclusionReason != null" >
+        inclusion_reason,
+      </if>
+      <if test="decisionOrgan != null" >
+        decision_organ,
+      </if>
+      <if test="removeDate != null" >
+        remove_date,
+      </if>
+      <if test="removeReason != null" >
+        remove_reason,
+      </if>
+      <if test="removeOrgan != null" >
+        remove_organ,
+      </if>
+      <if test="ctime != null" >
+        ctime,
+      </if>
+      <if test="atime != null" >
+        atime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="bid != null" >
+        #{bid,jdbcType=INTEGER},
+      </if>
+      <if test="uuid != null" >
+        #{uuid,jdbcType=VARCHAR},
+      </if>
+      <if test="inclusionDate != null" >
+        #{inclusionDate,jdbcType=VARCHAR},
+      </if>
+      <if test="inclusionReason != null" >
+        #{inclusionReason,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="decisionOrgan != null" >
+        #{decisionOrgan,jdbcType=VARCHAR},
+      </if>
+      <if test="removeDate != null" >
+        #{removeDate,jdbcType=VARCHAR},
+      </if>
+      <if test="removeReason != null" >
+        #{removeReason,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="removeOrgan != null" >
+        #{removeOrgan,jdbcType=VARCHAR},
+      </if>
+      <if test="ctime != null" >
+        #{ctime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="atime != null" >
+        #{atime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.yiguan.search.model.ComAbnormaloperationExample" resultType="java.lang.Integer" >
+    <choose >
+      <when test="groupByClause != null" >
+        select count(*) from ( select count(*) from com_abnormaloperation
+        <if test="_parameter != null" >
+          <include refid="Example_Where_Clause" />
+        </if>
+        group by ${groupByClause}) as temp
+      </when>
+      <otherwise >
+        select count(*) from com_abnormaloperation
+        <if test="_parameter != null" >
+          <include refid="Example_Where_Clause" />
+        </if>
+      </otherwise>
+    </choose>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update com_abnormaloperation
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.bid != null" >
+        bid = #{record.bid,jdbcType=INTEGER},
+      </if>
+      <if test="record.uuid != null" >
+        uuid = #{record.uuid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.inclusionDate != null" >
+        inclusion_date = #{record.inclusionDate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.inclusionReason != null" >
+        inclusion_reason = #{record.inclusionReason,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.decisionOrgan != null" >
+        decision_organ = #{record.decisionOrgan,jdbcType=VARCHAR},
+      </if>
+      <if test="record.removeDate != null" >
+        remove_date = #{record.removeDate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.removeReason != null" >
+        remove_reason = #{record.removeReason,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.removeOrgan != null" >
+        remove_organ = #{record.removeOrgan,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ctime != null" >
+        ctime = #{record.ctime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.atime != null" >
+        atime = #{record.atime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update com_abnormaloperation
+    set id = #{record.id,jdbcType=INTEGER},
+      bid = #{record.bid,jdbcType=INTEGER},
+      uuid = #{record.uuid,jdbcType=VARCHAR},
+      inclusion_date = #{record.inclusionDate,jdbcType=VARCHAR},
+      inclusion_reason = #{record.inclusionReason,jdbcType=LONGVARCHAR},
+      decision_organ = #{record.decisionOrgan,jdbcType=VARCHAR},
+      remove_date = #{record.removeDate,jdbcType=VARCHAR},
+      remove_reason = #{record.removeReason,jdbcType=LONGVARCHAR},
+      remove_organ = #{record.removeOrgan,jdbcType=VARCHAR},
+      ctime = #{record.ctime,jdbcType=TIMESTAMP},
+      atime = #{record.atime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.yiguan.search.model.ComAbnormaloperation" >
+    update com_abnormaloperation
+    <set >
+      <if test="bid != null" >
+        bid = #{bid,jdbcType=INTEGER},
+      </if>
+      <if test="uuid != null" >
+        uuid = #{uuid,jdbcType=VARCHAR},
+      </if>
+      <if test="inclusionDate != null" >
+        inclusion_date = #{inclusionDate,jdbcType=VARCHAR},
+      </if>
+      <if test="inclusionReason != null" >
+        inclusion_reason = #{inclusionReason,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="decisionOrgan != null" >
+        decision_organ = #{decisionOrgan,jdbcType=VARCHAR},
+      </if>
+      <if test="removeDate != null" >
+        remove_date = #{removeDate,jdbcType=VARCHAR},
+      </if>
+      <if test="removeReason != null" >
+        remove_reason = #{removeReason,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="removeOrgan != null" >
+        remove_organ = #{removeOrgan,jdbcType=VARCHAR},
+      </if>
+      <if test="ctime != null" >
+        ctime = #{ctime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="atime != null" >
+        atime = #{atime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.yiguan.search.model.ComAbnormaloperation" >
+    update com_abnormaloperation
+    set bid = #{bid,jdbcType=INTEGER},
+      uuid = #{uuid,jdbcType=VARCHAR},
+      inclusion_date = #{inclusionDate,jdbcType=VARCHAR},
+      inclusion_reason = #{inclusionReason,jdbcType=LONGVARCHAR},
+      decision_organ = #{decisionOrgan,jdbcType=VARCHAR},
+      remove_date = #{removeDate,jdbcType=VARCHAR},
+      remove_reason = #{removeReason,jdbcType=LONGVARCHAR},
+      remove_organ = #{removeOrgan,jdbcType=VARCHAR},
+      ctime = #{ctime,jdbcType=TIMESTAMP},
+      atime = #{atime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

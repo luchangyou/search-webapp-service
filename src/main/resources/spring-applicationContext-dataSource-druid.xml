@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd"
+        default-autowire="byName" default-lazy-init="false">
+
+
+    <context:property-placeholder location="classpath:db.properties" />
+
+    <bean id= "druidStatLogger" class="com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl" >
+        <property name= "logger" ref ="log4jb" />
+    </bean >
+
+    <bean id="log4jb" class="com.alibaba.druid.support.logging.Log4jImpl" >
+        <constructor-arg><value>druidStatMonitor</value></constructor-arg>
+    </bean>
+
+    <bean id="stat-filter" class="com.alibaba.druid.filter.stat.StatFilter">
+        <property name="slowSqlMillis" value="10000" />
+        <property name="logSlowSql" value="true" />
+    </bean>
+
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+<!--         <property name="url" value="jdbc:mysql://localhost/game_db?useUnicode=true&amp;characterEncoding=UTF-8&amp;relaxAutoCommit=true&amp;zeroDateTimeBehavior=convertToNull" /> -->
+<!-- 		<property name="username" value="root" /> -->
+<!-- 		<property name="password" value="5237" /> -->
+        <property name="url" value="jdbc:mysql://123.59.74.132:3306/game_db?useUnicode=true&amp;characterEncoding=UTF-8&amp;relaxAutoCommit=true&amp;zeroDateTimeBehavior=convertToNull" />
+		<property name="username" value="gtcom" />
+		<property name="password" value="admin@gt.com1" />
+        <property name="maxActive" value="30" />
+        <!--<property name="maxIdle" value="5" />-->
+
+        <property name="filters" value="stat,log4j" />
+        <property name="timeBetweenLogStatsMillis" value="600000" />
+        <property name="statLogger" ref="druidStatLogger" />
+        <!--<property name="useGlobalDataSourceStat" value="true" />-->
+    </bean>
+
+    <!-- sqlSessionFactory -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- 数据库连接池 -->
+        <property name="dataSource" ref="dataSource" />
+        <!-- 加载mybatis的全局配置文件 -->
+        <property name="configLocation" value="classpath:mybatis/sqlMapConfig.xml" />
+    </bean>
+
+    <!-- sqlSessionTemplate -->
+    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg index="0" ref="sqlSessionFactory"></constructor-arg>
+    </bean>
+
+    <!-- mapper扫描器 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!-- 扫描包路径，如果需要扫描多个包，中间使用半角逗号隔开 -->
+        <property name="basePackage" value="com.yiguan.search.mapper"></property>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+    </bean>
+
+
+</beans>
