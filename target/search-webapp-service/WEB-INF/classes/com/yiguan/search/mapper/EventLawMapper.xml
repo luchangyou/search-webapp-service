@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yiguan.search.mapper.EventLawMapper" >
+  <resultMap id="BaseResultMap" type="com.yiguan.search.model.EventLaw" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="euuid" property="euuid" jdbcType="VARCHAR" />
+    <result column="urllaw" property="urllaw" jdbcType="VARCHAR" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="court" property="court" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+    <result column="caseid" property="caseid" jdbcType="VARCHAR" />
+    <result column="related" property="related" jdbcType="LONGVARCHAR" />
+    <result column="urlwenshu" property="urlwenshu" jdbcType="VARCHAR" />
+    <result column="pulishtime" property="pulishtime" jdbcType="VARCHAR" />
+    <result column="content" property="content" jdbcType="LONGVARCHAR" />
+    <result column="ctime" property="ctime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Example_Where_Clause_forPage" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Group_Contact_List" >
+    <choose >
+      <when test="groupConcatList!=null and groupByClause != null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="groupConcatList" item="concat" separator="," >
+            ${concat}
+          </foreach>
+        </trim>
+        ,
+      </when>
+    </choose>
+  </sql>
+  <sql id="Group_Contact_List_forPage" >
+    <choose >
+      <when test="example.groupConcatList!=null and example.groupByClause != null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="example.groupConcatList" item="concat" separator="," >
+            ${concat}
+          </foreach>
+        </trim>
+        ,
+      </when>
+    </choose>
+  </sql>
+  <sql id="Base_Column_List" >
+    <choose >
+      <when test="columnFilterList!=null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="columnFilterList" item="column" separator="," >
+            ${column}
+          </foreach>
+        </trim>
+      </when>
+      <otherwise >
+        id, euuid, urllaw, title, court, type, caseid, related, urlwenshu, pulishtime, content, 
+        ctime
+      </otherwise>
+    </choose>
+  </sql>
+  <sql id="Base_Column_List_forPage" >
+    <choose >
+      <when test="example.columnFilterList!=null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="example.columnFilterList" item="column" separator="," >
+            ${column}
+          </foreach>
+        </trim>
+      </when>
+      <otherwise >
+        id, euuid, urllaw, title, court, type, caseid, related, urlwenshu, pulishtime, content, 
+        ctime
+      </otherwise>
+    </choose>
+  </sql>
+  <sql id="Base_Column_List_all" >
+    id, euuid, urllaw, title, court, type, caseid, related, urlwenshu, pulishtime, content, 
+    ctime
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.yiguan.search.model.EventLawExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Group_Contact_List" />
+    <include refid="Base_Column_List" />
+    from event_law
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="groupByClause != null" >
+      group by ${groupByClause}
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExampleForPage" resultMap="BaseResultMap" parameterType="map" >
+    select
+    <if test="example.distinct" >
+      distinct
+    </if>
+    <include refid="Group_Contact_List_forPage" />
+    <include refid="Base_Column_List_forPage" />
+    from event_law
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause_forPage" />
+    </if>
+    <if test="example.groupByClause != null" >
+      group by ${example.groupByClause}
+    </if>
+    <if test="example.orderByClause != null" >
+      order by ${example.orderByClause}
+    </if>
+    <if test="page.limit != -1" >
+       limit #{page.begin}, #{page.limit}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List_all" />
+    from event_law
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from event_law
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.yiguan.search.model.EventLawExample" >
+    delete from event_law
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.yiguan.search.model.EventLaw" useGeneratedKeys="true" keyProperty="id" >
+    insert into event_law (id, euuid, urllaw, 
+      title, court, type, 
+      caseid, related, urlwenshu, 
+      pulishtime, content, ctime
+      )
+    values (#{id,jdbcType=INTEGER}, #{euuid,jdbcType=VARCHAR}, #{urllaw,jdbcType=VARCHAR}, 
+      #{title,jdbcType=VARCHAR}, #{court,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{caseid,jdbcType=VARCHAR}, #{related,jdbcType=LONGVARCHAR}, #{urlwenshu,jdbcType=VARCHAR}, 
+      #{pulishtime,jdbcType=VARCHAR}, #{content,jdbcType=LONGVARCHAR}, #{ctime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.yiguan.search.model.EventLaw" useGeneratedKeys="true" keyProperty="id" >
+    insert into event_law
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="euuid != null" >
+        euuid,
+      </if>
+      <if test="urllaw != null" >
+        urllaw,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="court != null" >
+        court,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="caseid != null" >
+        caseid,
+      </if>
+      <if test="related != null" >
+        related,
+      </if>
+      <if test="urlwenshu != null" >
+        urlwenshu,
+      </if>
+      <if test="pulishtime != null" >
+        pulishtime,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+      <if test="ctime != null" >
+        ctime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="euuid != null" >
+        #{euuid,jdbcType=VARCHAR},
+      </if>
+      <if test="urllaw != null" >
+        #{urllaw,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="court != null" >
+        #{court,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="caseid != null" >
+        #{caseid,jdbcType=VARCHAR},
+      </if>
+      <if test="related != null" >
+        #{related,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="urlwenshu != null" >
+        #{urlwenshu,jdbcType=VARCHAR},
+      </if>
+      <if test="pulishtime != null" >
+        #{pulishtime,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="ctime != null" >
+        #{ctime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.yiguan.search.model.EventLawExample" resultType="java.lang.Integer" >
+    <choose >
+      <when test="groupByClause != null" >
+        select count(*) from ( select count(*) from event_law
+        <if test="_parameter != null" >
+          <include refid="Example_Where_Clause" />
+        </if>
+        group by ${groupByClause}) as temp
+      </when>
+      <otherwise >
+        select count(*) from event_law
+        <if test="_parameter != null" >
+          <include refid="Example_Where_Clause" />
+        </if>
+      </otherwise>
+    </choose>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update event_law
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.euuid != null" >
+        euuid = #{record.euuid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.urllaw != null" >
+        urllaw = #{record.urllaw,jdbcType=VARCHAR},
+      </if>
+      <if test="record.title != null" >
+        title = #{record.title,jdbcType=VARCHAR},
+      </if>
+      <if test="record.court != null" >
+        court = #{record.court,jdbcType=VARCHAR},
+      </if>
+      <if test="record.type != null" >
+        type = #{record.type,jdbcType=VARCHAR},
+      </if>
+      <if test="record.caseid != null" >
+        caseid = #{record.caseid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.related != null" >
+        related = #{record.related,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.urlwenshu != null" >
+        urlwenshu = #{record.urlwenshu,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pulishtime != null" >
+        pulishtime = #{record.pulishtime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.content != null" >
+        content = #{record.content,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.ctime != null" >
+        ctime = #{record.ctime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update event_law
+    set id = #{record.id,jdbcType=INTEGER},
+      euuid = #{record.euuid,jdbcType=VARCHAR},
+      urllaw = #{record.urllaw,jdbcType=VARCHAR},
+      title = #{record.title,jdbcType=VARCHAR},
+      court = #{record.court,jdbcType=VARCHAR},
+      type = #{record.type,jdbcType=VARCHAR},
+      caseid = #{record.caseid,jdbcType=VARCHAR},
+      related = #{record.related,jdbcType=LONGVARCHAR},
+      urlwenshu = #{record.urlwenshu,jdbcType=VARCHAR},
+      pulishtime = #{record.pulishtime,jdbcType=VARCHAR},
+      content = #{record.content,jdbcType=LONGVARCHAR},
+      ctime = #{record.ctime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.yiguan.search.model.EventLaw" >
+    update event_law
+    <set >
+      <if test="euuid != null" >
+        euuid = #{euuid,jdbcType=VARCHAR},
+      </if>
+      <if test="urllaw != null" >
+        urllaw = #{urllaw,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="court != null" >
+        court = #{court,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="caseid != null" >
+        caseid = #{caseid,jdbcType=VARCHAR},
+      </if>
+      <if test="related != null" >
+        related = #{related,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="urlwenshu != null" >
+        urlwenshu = #{urlwenshu,jdbcType=VARCHAR},
+      </if>
+      <if test="pulishtime != null" >
+        pulishtime = #{pulishtime,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+        content = #{content,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="ctime != null" >
+        ctime = #{ctime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.yiguan.search.model.EventLaw" >
+    update event_law
+    set euuid = #{euuid,jdbcType=VARCHAR},
+      urllaw = #{urllaw,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      court = #{court,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      caseid = #{caseid,jdbcType=VARCHAR},
+      related = #{related,jdbcType=LONGVARCHAR},
+      urlwenshu = #{urlwenshu,jdbcType=VARCHAR},
+      pulishtime = #{pulishtime,jdbcType=VARCHAR},
+      content = #{content,jdbcType=LONGVARCHAR},
+      ctime = #{ctime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

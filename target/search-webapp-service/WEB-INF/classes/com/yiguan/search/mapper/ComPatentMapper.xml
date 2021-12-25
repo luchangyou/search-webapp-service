@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yiguan.search.mapper.ComPatentMapper" >
+  <resultMap id="BaseResultMap" type="com.yiguan.search.model.ComPatent" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="bid" property="bid" jdbcType="INTEGER" />
+    <result column="uuid" property="uuid" jdbcType="VARCHAR" />
+    <result column="imgurl" property="imgurl" jdbcType="VARCHAR" />
+    <result column="apnumber" property="apnumber" jdbcType="VARCHAR" />
+    <result column="anumber" property="anumber" jdbcType="VARCHAR" />
+    <result column="cnumber" property="cnumber" jdbcType="VARCHAR" />
+    <result column="inventionname" property="inventionname" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="inventor" property="inventor" jdbcType="VARCHAR" />
+    <result column="applicant" property="applicant" jdbcType="VARCHAR" />
+    <result column="apdate" property="apdate" jdbcType="VARCHAR" />
+    <result column="andate" property="andate" jdbcType="VARCHAR" />
+    <result column="agency" property="agency" jdbcType="VARCHAR" />
+    <result column="agent" property="agent" jdbcType="VARCHAR" />
+    <result column="abs" property="abs" jdbcType="LONGVARCHAR" />
+    <result column="ctime" property="ctime" jdbcType="TIMESTAMP" />
+    <result column="atime" property="atime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Example_Where_Clause_forPage" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Group_Contact_List" >
+    <choose >
+      <when test="groupConcatList!=null and groupByClause != null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="groupConcatList" item="concat" separator="," >
+            ${concat}
+          </foreach>
+        </trim>
+        ,
+      </when>
+    </choose>
+  </sql>
+  <sql id="Group_Contact_List_forPage" >
+    <choose >
+      <when test="example.groupConcatList!=null and example.groupByClause != null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="example.groupConcatList" item="concat" separator="," >
+            ${concat}
+          </foreach>
+        </trim>
+        ,
+      </when>
+    </choose>
+  </sql>
+  <sql id="Base_Column_List" >
+    <choose >
+      <when test="columnFilterList!=null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="columnFilterList" item="column" separator="," >
+            ${column}
+          </foreach>
+        </trim>
+      </when>
+      <otherwise >
+        id, bid, uuid, imgurl, apnumber, anumber, cnumber, inventionname, address, inventor, 
+        applicant, apdate, andate, agency, agent, abs, ctime, atime
+      </otherwise>
+    </choose>
+  </sql>
+  <sql id="Base_Column_List_forPage" >
+    <choose >
+      <when test="example.columnFilterList!=null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="example.columnFilterList" item="column" separator="," >
+            ${column}
+          </foreach>
+        </trim>
+      </when>
+      <otherwise >
+        id, bid, uuid, imgurl, apnumber, anumber, cnumber, inventionname, address, inventor, 
+        applicant, apdate, andate, agency, agent, abs, ctime, atime
+      </otherwise>
+    </choose>
+  </sql>
+  <sql id="Base_Column_List_all" >
+    id, bid, uuid, imgurl, apnumber, anumber, cnumber, inventionname, address, inventor, 
+    applicant, apdate, andate, agency, agent, abs, ctime, atime
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.yiguan.search.model.ComPatentExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Group_Contact_List" />
+    <include refid="Base_Column_List" />
+    from com_patent
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="groupByClause != null" >
+      group by ${groupByClause}
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExampleForPage" resultMap="BaseResultMap" parameterType="map" >
+    select
+    <if test="example.distinct" >
+      distinct
+    </if>
+    <include refid="Group_Contact_List_forPage" />
+    <include refid="Base_Column_List_forPage" />
+    from com_patent
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause_forPage" />
+    </if>
+    <if test="example.groupByClause != null" >
+      group by ${example.groupByClause}
+    </if>
+    <if test="example.orderByClause != null" >
+      order by ${example.orderByClause}
+    </if>
+    <if test="page.limit != -1" >
+       limit #{page.begin}, #{page.limit}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List_all" />
+    from com_patent
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from com_patent
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.yiguan.search.model.ComPatentExample" >
+    delete from com_patent
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.yiguan.search.model.ComPatent" useGeneratedKeys="true" keyProperty="id" >
+    insert into com_patent (id, bid, uuid, 
+      imgurl, apnumber, anumber, 
+      cnumber, inventionname, address, 
+      inventor, applicant, apdate, 
+      andate, agency, agent, 
+      abs, ctime, atime
+      )
+    values (#{id,jdbcType=INTEGER}, #{bid,jdbcType=INTEGER}, #{uuid,jdbcType=VARCHAR}, 
+      #{imgurl,jdbcType=VARCHAR}, #{apnumber,jdbcType=VARCHAR}, #{anumber,jdbcType=VARCHAR}, 
+      #{cnumber,jdbcType=VARCHAR}, #{inventionname,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{inventor,jdbcType=VARCHAR}, #{applicant,jdbcType=VARCHAR}, #{apdate,jdbcType=VARCHAR}, 
+      #{andate,jdbcType=VARCHAR}, #{agency,jdbcType=VARCHAR}, #{agent,jdbcType=VARCHAR}, 
+      #{abs,jdbcType=LONGVARCHAR}, #{ctime,jdbcType=TIMESTAMP}, #{atime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.yiguan.search.model.ComPatent" useGeneratedKeys="true" keyProperty="id" >
+    insert into com_patent
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="bid != null" >
+        bid,
+      </if>
+      <if test="uuid != null" >
+        uuid,
+      </if>
+      <if test="imgurl != null" >
+        imgurl,
+      </if>
+      <if test="apnumber != null" >
+        apnumber,
+      </if>
+      <if test="anumber != null" >
+        anumber,
+      </if>
+      <if test="cnumber != null" >
+        cnumber,
+      </if>
+      <if test="inventionname != null" >
+        inventionname,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="inventor != null" >
+        inventor,
+      </if>
+      <if test="applicant != null" >
+        applicant,
+      </if>
+      <if test="apdate != null" >
+        apdate,
+      </if>
+      <if test="andate != null" >
+        andate,
+      </if>
+      <if test="agency != null" >
+        agency,
+      </if>
+      <if test="agent != null" >
+        agent,
+      </if>
+      <if test="abs != null" >
+        abs,
+      </if>
+      <if test="ctime != null" >
+        ctime,
+      </if>
+      <if test="atime != null" >
+        atime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="bid != null" >
+        #{bid,jdbcType=INTEGER},
+      </if>
+      <if test="uuid != null" >
+        #{uuid,jdbcType=VARCHAR},
+      </if>
+      <if test="imgurl != null" >
+        #{imgurl,jdbcType=VARCHAR},
+      </if>
+      <if test="apnumber != null" >
+        #{apnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="anumber != null" >
+        #{anumber,jdbcType=VARCHAR},
+      </if>
+      <if test="cnumber != null" >
+        #{cnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="inventionname != null" >
+        #{inventionname,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="inventor != null" >
+        #{inventor,jdbcType=VARCHAR},
+      </if>
+      <if test="applicant != null" >
+        #{applicant,jdbcType=VARCHAR},
+      </if>
+      <if test="apdate != null" >
+        #{apdate,jdbcType=VARCHAR},
+      </if>
+      <if test="andate != null" >
+        #{andate,jdbcType=VARCHAR},
+      </if>
+      <if test="agency != null" >
+        #{agency,jdbcType=VARCHAR},
+      </if>
+      <if test="agent != null" >
+        #{agent,jdbcType=VARCHAR},
+      </if>
+      <if test="abs != null" >
+        #{abs,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="ctime != null" >
+        #{ctime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="atime != null" >
+        #{atime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.yiguan.search.model.ComPatentExample" resultType="java.lang.Integer" >
+    <choose >
+      <when test="groupByClause != null" >
+        select count(*) from ( select count(*) from com_patent
+        <if test="_parameter != null" >
+          <include refid="Example_Where_Clause" />
+        </if>
+        group by ${groupByClause}) as temp
+      </when>
+      <otherwise >
+        select count(*) from com_patent
+        <if test="_parameter != null" >
+          <include refid="Example_Where_Clause" />
+        </if>
+      </otherwise>
+    </choose>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update com_patent
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.bid != null" >
+        bid = #{record.bid,jdbcType=INTEGER},
+      </if>
+      <if test="record.uuid != null" >
+        uuid = #{record.uuid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imgurl != null" >
+        imgurl = #{record.imgurl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.apnumber != null" >
+        apnumber = #{record.apnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.anumber != null" >
+        anumber = #{record.anumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cnumber != null" >
+        cnumber = #{record.cnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.inventionname != null" >
+        inventionname = #{record.inventionname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.address != null" >
+        address = #{record.address,jdbcType=VARCHAR},
+      </if>
+      <if test="record.inventor != null" >
+        inventor = #{record.inventor,jdbcType=VARCHAR},
+      </if>
+      <if test="record.applicant != null" >
+        applicant = #{record.applicant,jdbcType=VARCHAR},
+      </if>
+      <if test="record.apdate != null" >
+        apdate = #{record.apdate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.andate != null" >
+        andate = #{record.andate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.agency != null" >
+        agency = #{record.agency,jdbcType=VARCHAR},
+      </if>
+      <if test="record.agent != null" >
+        agent = #{record.agent,jdbcType=VARCHAR},
+      </if>
+      <if test="record.abs != null" >
+        abs = #{record.abs,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.ctime != null" >
+        ctime = #{record.ctime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.atime != null" >
+        atime = #{record.atime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update com_patent
+    set id = #{record.id,jdbcType=INTEGER},
+      bid = #{record.bid,jdbcType=INTEGER},
+      uuid = #{record.uuid,jdbcType=VARCHAR},
+      imgurl = #{record.imgurl,jdbcType=VARCHAR},
+      apnumber = #{record.apnumber,jdbcType=VARCHAR},
+      anumber = #{record.anumber,jdbcType=VARCHAR},
+      cnumber = #{record.cnumber,jdbcType=VARCHAR},
+      inventionname = #{record.inventionname,jdbcType=VARCHAR},
+      address = #{record.address,jdbcType=VARCHAR},
+      inventor = #{record.inventor,jdbcType=VARCHAR},
+      applicant = #{record.applicant,jdbcType=VARCHAR},
+      apdate = #{record.apdate,jdbcType=VARCHAR},
+      andate = #{record.andate,jdbcType=VARCHAR},
+      agency = #{record.agency,jdbcType=VARCHAR},
+      agent = #{record.agent,jdbcType=VARCHAR},
+      abs = #{record.abs,jdbcType=LONGVARCHAR},
+      ctime = #{record.ctime,jdbcType=TIMESTAMP},
+      atime = #{record.atime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.yiguan.search.model.ComPatent" >
+    update com_patent
+    <set >
+      <if test="bid != null" >
+        bid = #{bid,jdbcType=INTEGER},
+      </if>
+      <if test="uuid != null" >
+        uuid = #{uuid,jdbcType=VARCHAR},
+      </if>
+      <if test="imgurl != null" >
+        imgurl = #{imgurl,jdbcType=VARCHAR},
+      </if>
+      <if test="apnumber != null" >
+        apnumber = #{apnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="anumber != null" >
+        anumber = #{anumber,jdbcType=VARCHAR},
+      </if>
+      <if test="cnumber != null" >
+        cnumber = #{cnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="inventionname != null" >
+        inventionname = #{inventionname,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="inventor != null" >
+        inventor = #{inventor,jdbcType=VARCHAR},
+      </if>
+      <if test="applicant != null" >
+        applicant = #{applicant,jdbcType=VARCHAR},
+      </if>
+      <if test="apdate != null" >
+        apdate = #{apdate,jdbcType=VARCHAR},
+      </if>
+      <if test="andate != null" >
+        andate = #{andate,jdbcType=VARCHAR},
+      </if>
+      <if test="agency != null" >
+        agency = #{agency,jdbcType=VARCHAR},
+      </if>
+      <if test="agent != null" >
+        agent = #{agent,jdbcType=VARCHAR},
+      </if>
+      <if test="abs != null" >
+        abs = #{abs,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="ctime != null" >
+        ctime = #{ctime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="atime != null" >
+        atime = #{atime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.yiguan.search.model.ComPatent" >
+    update com_patent
+    set bid = #{bid,jdbcType=INTEGER},
+      uuid = #{uuid,jdbcType=VARCHAR},
+      imgurl = #{imgurl,jdbcType=VARCHAR},
+      apnumber = #{apnumber,jdbcType=VARCHAR},
+      anumber = #{anumber,jdbcType=VARCHAR},
+      cnumber = #{cnumber,jdbcType=VARCHAR},
+      inventionname = #{inventionname,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      inventor = #{inventor,jdbcType=VARCHAR},
+      applicant = #{applicant,jdbcType=VARCHAR},
+      apdate = #{apdate,jdbcType=VARCHAR},
+      andate = #{andate,jdbcType=VARCHAR},
+      agency = #{agency,jdbcType=VARCHAR},
+      agent = #{agent,jdbcType=VARCHAR},
+      abs = #{abs,jdbcType=LONGVARCHAR},
+      ctime = #{ctime,jdbcType=TIMESTAMP},
+      atime = #{atime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

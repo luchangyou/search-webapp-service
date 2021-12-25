@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yiguan.search.mapper.ComShareholderMapper" >
+  <resultMap id="BaseResultMap" type="com.yiguan.search.model.ComShareholder" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="bid" property="bid" jdbcType="INTEGER" />
+    <result column="uuid" property="uuid" jdbcType="CHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="investment" property="investment" jdbcType="VARCHAR" />
+    <result column="adress" property="adress" jdbcType="VARCHAR" />
+    <result column="web" property="web" jdbcType="VARCHAR" />
+    <result column="ctime" property="ctime" jdbcType="TIMESTAMP" />
+    <result column="atime" property="atime" jdbcType="TIMESTAMP" />
+    <result column="investment_rate" property="investmentRate" jdbcType="VARCHAR" />
+    <result column="subscription_amount" property="subscriptionAmount" jdbcType="VARCHAR" />
+    <result column="subscribed_capital_contribution" property="subscribedCapitalContribution" jdbcType="VARCHAR" />
+    <result column="paidin_amount" property="paidinAmount" jdbcType="VARCHAR" />
+    <result column="subscription_time" property="subscriptionTime" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Example_Where_Clause_forPage" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Group_Contact_List" >
+    <choose >
+      <when test="groupConcatList!=null and groupByClause != null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="groupConcatList" item="concat" separator="," >
+            ${concat}
+          </foreach>
+        </trim>
+        ,
+      </when>
+    </choose>
+  </sql>
+  <sql id="Group_Contact_List_forPage" >
+    <choose >
+      <when test="example.groupConcatList!=null and example.groupByClause != null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="example.groupConcatList" item="concat" separator="," >
+            ${concat}
+          </foreach>
+        </trim>
+        ,
+      </when>
+    </choose>
+  </sql>
+  <sql id="Base_Column_List" >
+    <choose >
+      <when test="columnFilterList!=null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="columnFilterList" item="column" separator="," >
+            ${column}
+          </foreach>
+        </trim>
+      </when>
+      <otherwise >
+        id, bid, uuid, name, investment, adress, web, ctime, atime, investment_rate, subscription_amount, 
+        subscribed_capital_contribution, paidin_amount, subscription_time
+      </otherwise>
+    </choose>
+  </sql>
+  <sql id="Base_Column_List_forPage" >
+    <choose >
+      <when test="example.columnFilterList!=null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="example.columnFilterList" item="column" separator="," >
+            ${column}
+          </foreach>
+        </trim>
+      </when>
+      <otherwise >
+        id, bid, uuid, name, investment, adress, web, ctime, atime, investment_rate, subscription_amount, 
+        subscribed_capital_contribution, paidin_amount, subscription_time
+      </otherwise>
+    </choose>
+  </sql>
+  <sql id="Base_Column_List_all" >
+    id, bid, uuid, name, investment, adress, web, ctime, atime, investment_rate, subscription_amount, 
+    subscribed_capital_contribution, paidin_amount, subscription_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.yiguan.search.model.ComShareholderExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Group_Contact_List" />
+    <include refid="Base_Column_List" />
+    from com_shareholder
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="groupByClause != null" >
+      group by ${groupByClause}
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExampleForPage" resultMap="BaseResultMap" parameterType="map" >
+    select
+    <if test="example.distinct" >
+      distinct
+    </if>
+    <include refid="Group_Contact_List_forPage" />
+    <include refid="Base_Column_List_forPage" />
+    from com_shareholder
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause_forPage" />
+    </if>
+    <if test="example.groupByClause != null" >
+      group by ${example.groupByClause}
+    </if>
+    <if test="example.orderByClause != null" >
+      order by ${example.orderByClause}
+    </if>
+    <if test="page.limit != -1" >
+       limit #{page.begin}, #{page.limit}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List_all" />
+    from com_shareholder
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from com_shareholder
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.yiguan.search.model.ComShareholderExample" >
+    delete from com_shareholder
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.yiguan.search.model.ComShareholder" useGeneratedKeys="true" keyProperty="id" >
+    insert into com_shareholder (id, bid, uuid, name, 
+      investment, adress, web, 
+      ctime, atime, investment_rate, 
+      subscription_amount, subscribed_capital_contribution, 
+      paidin_amount, subscription_time)
+    values (#{id,jdbcType=INTEGER}, #{bid,jdbcType=INTEGER}, #{uuid,jdbcType=CHAR}, #{name,jdbcType=VARCHAR}, 
+      #{investment,jdbcType=VARCHAR}, #{adress,jdbcType=VARCHAR}, #{web,jdbcType=VARCHAR}, 
+      #{ctime,jdbcType=TIMESTAMP}, #{atime,jdbcType=TIMESTAMP}, #{investmentRate,jdbcType=VARCHAR}, 
+      #{subscriptionAmount,jdbcType=VARCHAR}, #{subscribedCapitalContribution,jdbcType=VARCHAR}, 
+      #{paidinAmount,jdbcType=VARCHAR}, #{subscriptionTime,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.yiguan.search.model.ComShareholder" useGeneratedKeys="true" keyProperty="id" >
+    insert into com_shareholder
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="bid != null" >
+        bid,
+      </if>
+      <if test="uuid != null" >
+        uuid,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="investment != null" >
+        investment,
+      </if>
+      <if test="adress != null" >
+        adress,
+      </if>
+      <if test="web != null" >
+        web,
+      </if>
+      <if test="ctime != null" >
+        ctime,
+      </if>
+      <if test="atime != null" >
+        atime,
+      </if>
+      <if test="investmentRate != null" >
+        investment_rate,
+      </if>
+      <if test="subscriptionAmount != null" >
+        subscription_amount,
+      </if>
+      <if test="subscribedCapitalContribution != null" >
+        subscribed_capital_contribution,
+      </if>
+      <if test="paidinAmount != null" >
+        paidin_amount,
+      </if>
+      <if test="subscriptionTime != null" >
+        subscription_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="bid != null" >
+        #{bid,jdbcType=INTEGER},
+      </if>
+      <if test="uuid != null" >
+        #{uuid,jdbcType=CHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="investment != null" >
+        #{investment,jdbcType=VARCHAR},
+      </if>
+      <if test="adress != null" >
+        #{adress,jdbcType=VARCHAR},
+      </if>
+      <if test="web != null" >
+        #{web,jdbcType=VARCHAR},
+      </if>
+      <if test="ctime != null" >
+        #{ctime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="atime != null" >
+        #{atime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="investmentRate != null" >
+        #{investmentRate,jdbcType=VARCHAR},
+      </if>
+      <if test="subscriptionAmount != null" >
+        #{subscriptionAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="subscribedCapitalContribution != null" >
+        #{subscribedCapitalContribution,jdbcType=VARCHAR},
+      </if>
+      <if test="paidinAmount != null" >
+        #{paidinAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="subscriptionTime != null" >
+        #{subscriptionTime,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.yiguan.search.model.ComShareholderExample" resultType="java.lang.Integer" >
+    <choose >
+      <when test="groupByClause != null" >
+        select count(*) from ( select count(*) from com_shareholder
+        <if test="_parameter != null" >
+          <include refid="Example_Where_Clause" />
+        </if>
+        group by ${groupByClause}) as temp
+      </when>
+      <otherwise >
+        select count(*) from com_shareholder
+        <if test="_parameter != null" >
+          <include refid="Example_Where_Clause" />
+        </if>
+      </otherwise>
+    </choose>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update com_shareholder
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.bid != null" >
+        bid = #{record.bid,jdbcType=INTEGER},
+      </if>
+      <if test="record.uuid != null" >
+        uuid = #{record.uuid,jdbcType=CHAR},
+      </if>
+      <if test="record.name != null" >
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.investment != null" >
+        investment = #{record.investment,jdbcType=VARCHAR},
+      </if>
+      <if test="record.adress != null" >
+        adress = #{record.adress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.web != null" >
+        web = #{record.web,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ctime != null" >
+        ctime = #{record.ctime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.atime != null" >
+        atime = #{record.atime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.investmentRate != null" >
+        investment_rate = #{record.investmentRate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.subscriptionAmount != null" >
+        subscription_amount = #{record.subscriptionAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="record.subscribedCapitalContribution != null" >
+        subscribed_capital_contribution = #{record.subscribedCapitalContribution,jdbcType=VARCHAR},
+      </if>
+      <if test="record.paidinAmount != null" >
+        paidin_amount = #{record.paidinAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="record.subscriptionTime != null" >
+        subscription_time = #{record.subscriptionTime,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update com_shareholder
+    set id = #{record.id,jdbcType=INTEGER},
+      bid = #{record.bid,jdbcType=INTEGER},
+      uuid = #{record.uuid,jdbcType=CHAR},
+      name = #{record.name,jdbcType=VARCHAR},
+      investment = #{record.investment,jdbcType=VARCHAR},
+      adress = #{record.adress,jdbcType=VARCHAR},
+      web = #{record.web,jdbcType=VARCHAR},
+      ctime = #{record.ctime,jdbcType=TIMESTAMP},
+      atime = #{record.atime,jdbcType=TIMESTAMP},
+      investment_rate = #{record.investmentRate,jdbcType=VARCHAR},
+      subscription_amount = #{record.subscriptionAmount,jdbcType=VARCHAR},
+      subscribed_capital_contribution = #{record.subscribedCapitalContribution,jdbcType=VARCHAR},
+      paidin_amount = #{record.paidinAmount,jdbcType=VARCHAR},
+      subscription_time = #{record.subscriptionTime,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.yiguan.search.model.ComShareholder" >
+    update com_shareholder
+    <set >
+      <if test="bid != null" >
+        bid = #{bid,jdbcType=INTEGER},
+      </if>
+      <if test="uuid != null" >
+        uuid = #{uuid,jdbcType=CHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="investment != null" >
+        investment = #{investment,jdbcType=VARCHAR},
+      </if>
+      <if test="adress != null" >
+        adress = #{adress,jdbcType=VARCHAR},
+      </if>
+      <if test="web != null" >
+        web = #{web,jdbcType=VARCHAR},
+      </if>
+      <if test="ctime != null" >
+        ctime = #{ctime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="atime != null" >
+        atime = #{atime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="investmentRate != null" >
+        investment_rate = #{investmentRate,jdbcType=VARCHAR},
+      </if>
+      <if test="subscriptionAmount != null" >
+        subscription_amount = #{subscriptionAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="subscribedCapitalContribution != null" >
+        subscribed_capital_contribution = #{subscribedCapitalContribution,jdbcType=VARCHAR},
+      </if>
+      <if test="paidinAmount != null" >
+        paidin_amount = #{paidinAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="subscriptionTime != null" >
+        subscription_time = #{subscriptionTime,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.yiguan.search.model.ComShareholder" >
+    update com_shareholder
+    set bid = #{bid,jdbcType=INTEGER},
+      uuid = #{uuid,jdbcType=CHAR},
+      name = #{name,jdbcType=VARCHAR},
+      investment = #{investment,jdbcType=VARCHAR},
+      adress = #{adress,jdbcType=VARCHAR},
+      web = #{web,jdbcType=VARCHAR},
+      ctime = #{ctime,jdbcType=TIMESTAMP},
+      atime = #{atime,jdbcType=TIMESTAMP},
+      investment_rate = #{investmentRate,jdbcType=VARCHAR},
+      subscription_amount = #{subscriptionAmount,jdbcType=VARCHAR},
+      subscribed_capital_contribution = #{subscribedCapitalContribution,jdbcType=VARCHAR},
+      paidin_amount = #{paidinAmount,jdbcType=VARCHAR},
+      subscription_time = #{subscriptionTime,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

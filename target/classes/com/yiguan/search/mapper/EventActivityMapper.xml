@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yiguan.search.mapper.EventActivityMapper" >
+  <resultMap id="BaseResultMap" type="com.yiguan.search.model.EventActivity" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="time" property="time" jdbcType="VARCHAR" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="class_lb" property="classLb" jdbcType="VARCHAR" />
+    <result column="ctime" property="ctime" jdbcType="TIMESTAMP" />
+    <result column="source" property="source" jdbcType="VARCHAR" />
+    <result column="sponsor" property="sponsor" jdbcType="VARCHAR" />
+    <result column="location" property="location" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="euuid" property="euuid" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Example_Where_Clause_forPage" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Group_Contact_List" >
+    <choose >
+      <when test="groupConcatList!=null and groupByClause != null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="groupConcatList" item="concat" separator="," >
+            ${concat}
+          </foreach>
+        </trim>
+        ,
+      </when>
+    </choose>
+  </sql>
+  <sql id="Group_Contact_List_forPage" >
+    <choose >
+      <when test="example.groupConcatList!=null and example.groupByClause != null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="example.groupConcatList" item="concat" separator="," >
+            ${concat}
+          </foreach>
+        </trim>
+        ,
+      </when>
+    </choose>
+  </sql>
+  <sql id="Base_Column_List" >
+    <choose >
+      <when test="columnFilterList!=null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="columnFilterList" item="column" separator="," >
+            ${column}
+          </foreach>
+        </trim>
+      </when>
+      <otherwise >
+        id, name, time, url, class_lb, ctime, source, sponsor, location, city, euuid
+      </otherwise>
+    </choose>
+  </sql>
+  <sql id="Base_Column_List_forPage" >
+    <choose >
+      <when test="example.columnFilterList!=null" >
+        <trim prefix="" suffix="" suffixOverrides="," >
+          <foreach collection="example.columnFilterList" item="column" separator="," >
+            ${column}
+          </foreach>
+        </trim>
+      </when>
+      <otherwise >
+        id, name, time, url, class_lb, ctime, source, sponsor, location, city, euuid
+      </otherwise>
+    </choose>
+  </sql>
+  <sql id="Base_Column_List_all" >
+    id, name, time, url, class_lb, ctime, source, sponsor, location, city, euuid
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.yiguan.search.model.EventActivityExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Group_Contact_List" />
+    <include refid="Base_Column_List" />
+    from event_activity
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="groupByClause != null" >
+      group by ${groupByClause}
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExampleForPage" resultMap="BaseResultMap" parameterType="map" >
+    select
+    <if test="example.distinct" >
+      distinct
+    </if>
+    <include refid="Group_Contact_List_forPage" />
+    <include refid="Base_Column_List_forPage" />
+    from event_activity
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause_forPage" />
+    </if>
+    <if test="example.groupByClause != null" >
+      group by ${example.groupByClause}
+    </if>
+    <if test="example.orderByClause != null" >
+      order by ${example.orderByClause}
+    </if>
+    <if test="page.limit != -1" >
+       limit #{page.begin}, #{page.limit}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List_all" />
+    from event_activity
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from event_activity
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.yiguan.search.model.EventActivityExample" >
+    delete from event_activity
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.yiguan.search.model.EventActivity" useGeneratedKeys="true" keyProperty="id" >
+    insert into event_activity (id, name, time, 
+      url, class_lb, ctime, 
+      source, sponsor, location, 
+      city, euuid)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{time,jdbcType=VARCHAR}, 
+      #{url,jdbcType=VARCHAR}, #{classLb,jdbcType=VARCHAR}, #{ctime,jdbcType=TIMESTAMP}, 
+      #{source,jdbcType=VARCHAR}, #{sponsor,jdbcType=VARCHAR}, #{location,jdbcType=VARCHAR}, 
+      #{city,jdbcType=VARCHAR}, #{euuid,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.yiguan.search.model.EventActivity" useGeneratedKeys="true" keyProperty="id" >
+    insert into event_activity
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="time != null" >
+        time,
+      </if>
+      <if test="url != null" >
+        url,
+      </if>
+      <if test="classLb != null" >
+        class_lb,
+      </if>
+      <if test="ctime != null" >
+        ctime,
+      </if>
+      <if test="source != null" >
+        source,
+      </if>
+      <if test="sponsor != null" >
+        sponsor,
+      </if>
+      <if test="location != null" >
+        location,
+      </if>
+      <if test="city != null" >
+        city,
+      </if>
+      <if test="euuid != null" >
+        euuid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="time != null" >
+        #{time,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null" >
+        #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="classLb != null" >
+        #{classLb,jdbcType=VARCHAR},
+      </if>
+      <if test="ctime != null" >
+        #{ctime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="source != null" >
+        #{source,jdbcType=VARCHAR},
+      </if>
+      <if test="sponsor != null" >
+        #{sponsor,jdbcType=VARCHAR},
+      </if>
+      <if test="location != null" >
+        #{location,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null" >
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="euuid != null" >
+        #{euuid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.yiguan.search.model.EventActivityExample" resultType="java.lang.Integer" >
+    <choose >
+      <when test="groupByClause != null" >
+        select count(*) from ( select count(*) from event_activity
+        <if test="_parameter != null" >
+          <include refid="Example_Where_Clause" />
+        </if>
+        group by ${groupByClause}) as temp
+      </when>
+      <otherwise >
+        select count(*) from event_activity
+        <if test="_parameter != null" >
+          <include refid="Example_Where_Clause" />
+        </if>
+      </otherwise>
+    </choose>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update event_activity
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.name != null" >
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.time != null" >
+        time = #{record.time,jdbcType=VARCHAR},
+      </if>
+      <if test="record.url != null" >
+        url = #{record.url,jdbcType=VARCHAR},
+      </if>
+      <if test="record.classLb != null" >
+        class_lb = #{record.classLb,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ctime != null" >
+        ctime = #{record.ctime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.source != null" >
+        source = #{record.source,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sponsor != null" >
+        sponsor = #{record.sponsor,jdbcType=VARCHAR},
+      </if>
+      <if test="record.location != null" >
+        location = #{record.location,jdbcType=VARCHAR},
+      </if>
+      <if test="record.city != null" >
+        city = #{record.city,jdbcType=VARCHAR},
+      </if>
+      <if test="record.euuid != null" >
+        euuid = #{record.euuid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update event_activity
+    set id = #{record.id,jdbcType=INTEGER},
+      name = #{record.name,jdbcType=VARCHAR},
+      time = #{record.time,jdbcType=VARCHAR},
+      url = #{record.url,jdbcType=VARCHAR},
+      class_lb = #{record.classLb,jdbcType=VARCHAR},
+      ctime = #{record.ctime,jdbcType=TIMESTAMP},
+      source = #{record.source,jdbcType=VARCHAR},
+      sponsor = #{record.sponsor,jdbcType=VARCHAR},
+      location = #{record.location,jdbcType=VARCHAR},
+      city = #{record.city,jdbcType=VARCHAR},
+      euuid = #{record.euuid,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.yiguan.search.model.EventActivity" >
+    update event_activity
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="time != null" >
+        time = #{time,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null" >
+        url = #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="classLb != null" >
+        class_lb = #{classLb,jdbcType=VARCHAR},
+      </if>
+      <if test="ctime != null" >
+        ctime = #{ctime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="source != null" >
+        source = #{source,jdbcType=VARCHAR},
+      </if>
+      <if test="sponsor != null" >
+        sponsor = #{sponsor,jdbcType=VARCHAR},
+      </if>
+      <if test="location != null" >
+        location = #{location,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null" >
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="euuid != null" >
+        euuid = #{euuid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.yiguan.search.model.EventActivity" >
+    update event_activity
+    set name = #{name,jdbcType=VARCHAR},
+      time = #{time,jdbcType=VARCHAR},
+      url = #{url,jdbcType=VARCHAR},
+      class_lb = #{classLb,jdbcType=VARCHAR},
+      ctime = #{ctime,jdbcType=TIMESTAMP},
+      source = #{source,jdbcType=VARCHAR},
+      sponsor = #{sponsor,jdbcType=VARCHAR},
+      location = #{location,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      euuid = #{euuid,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

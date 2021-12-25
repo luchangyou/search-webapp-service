@@ -1,0 +1,1743 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" readonly="true" id="fe38b318-35ef-4e32-a9ef-887320b27093" name="Default" comment="" />
+    <ignored path="search-webapp-service.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="search-webapp-service" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AbstractBeanFactory.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.4.RELEASE/spring-beans-4.3.4.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractBeanFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5650">
+              <caret line="301" column="43" selection-start-line="301" selection-start-column="43" selection-end-line="301" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#66700#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#8637#8638#0" expanded="false" />
+                <element signature="e#8686#8687#0" expanded="false" />
+                <element signature="e#25816#25817#0" expanded="false" />
+                <element signature="e#25852#25853#0" expanded="false" />
+                <element signature="e#26894#26895#0" expanded="false" />
+                <element signature="e#26928#26929#0" expanded="false" />
+                <element signature="e#27003#27004#0" expanded="false" />
+                <element signature="e#27048#27049#0" expanded="false" />
+                <element signature="e#27103#27104#0" expanded="false" />
+                <element signature="e#27137#27138#0" expanded="false" />
+                <element signature="e#27212#27213#0" expanded="false" />
+                <element signature="e#27261#27262#0" expanded="false" />
+                <element signature="e#27313#27314#0" expanded="false" />
+                <element signature="e#27349#27350#0" expanded="false" />
+                <element signature="e#27435#27436#0" expanded="false" />
+                <element signature="e#27480#27481#0" expanded="false" />
+                <element signature="e#27553#27554#0" expanded="false" />
+                <element signature="e#27594#27595#0" expanded="false" />
+                <element signature="e#27679#27680#0" expanded="false" />
+                <element signature="e#27728#27729#0" expanded="false" />
+                <element signature="e#27791#27792#0" expanded="false" />
+                <element signature="e#27827#27828#0" expanded="false" />
+                <element signature="e#28168#28169#0" expanded="false" />
+                <element signature="e#28211#28212#0" expanded="false" />
+                <element signature="e#28615#28616#0" expanded="false" />
+                <element signature="e#28653#28654#0" expanded="false" />
+                <element signature="e#28837#28838#0" expanded="false" />
+                <element signature="e#28869#28870#0" expanded="false" />
+                <element signature="e#28942#28943#0" expanded="false" />
+                <element signature="e#28983#28984#0" expanded="false" />
+                <element signature="e#29170#29171#0" expanded="false" />
+                <element signature="e#29202#29203#0" expanded="false" />
+                <element signature="e#29925#29926#0" expanded="false" />
+                <element signature="e#29977#29978#0" expanded="false" />
+                <element signature="e#30882#30883#0" expanded="false" />
+                <element signature="e#30926#30927#0" expanded="false" />
+                <element signature="e#31099#31100#0" expanded="false" />
+                <element signature="e#31136#31137#0" expanded="false" />
+                <element signature="e#31461#31462#0" expanded="false" />
+                <element signature="e#31519#31520#0" expanded="false" />
+                <element signature="e#31838#31839#0" expanded="false" />
+                <element signature="e#31894#31895#0" expanded="false" />
+                <element signature="e#32717#32718#0" expanded="false" />
+                <element signature="e#32778#32779#0" expanded="false" />
+                <element signature="e#40523#40524#0" expanded="false" />
+                <element signature="e#40594#40595#0" expanded="false" />
+                <element signature="e#48875#48876#0" expanded="false" />
+                <element signature="e#48925#48926#0" expanded="false" />
+                <element signature="e#58310#58311#0" expanded="false" />
+                <element signature="e#58362#58363#0" expanded="false" />
+                <element signature="e#59080#59081#0" expanded="false" />
+                <element signature="e#59124#59125#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FactoryBeanRegistrySupport.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.4.RELEASE/spring-beans-4.3.4.RELEASE-sources.jar!/org/springframework/beans/factory/support/FactoryBeanRegistrySupport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1725">
+              <caret line="97" column="21" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#8668#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#2363#2364#0" expanded="false" />
+                <element signature="e#2412#2413#0" expanded="false" />
+                <element signature="e#8620#8621#0" expanded="false" />
+                <element signature="e#8663#8664#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractAutowireCapableBeanFactory.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.4.RELEASE/spring-beans-4.3.4.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9000">
+              <caret line="445" column="21" selection-start-line="445" selection-start-column="21" selection-end-line="445" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#69867#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#8166#8167#0" expanded="false" />
+                <element signature="e#8206#8207#0" expanded="false" />
+                <element signature="e#8728#8729#0" expanded="false" />
+                <element signature="e#8770#8771#0" expanded="false" />
+                <element signature="e#10838#10839#0" expanded="false" />
+                <element signature="e#10882#10883#0" expanded="false" />
+                <element signature="e#11483#11484#0" expanded="false" />
+                <element signature="e#11531#11532#0" expanded="false" />
+                <element signature="e#15713#15714#0" expanded="false" />
+                <element signature="e#15791#15792#0" expanded="false" />
+                <element signature="e#44743#44744#0" expanded="false" />
+                <element signature="e#44826#44827#0" expanded="false" />
+                <element signature="e#69839#69840#0" expanded="false" />
+                <element signature="e#69859#69860#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractPropertyAccessor.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.4.RELEASE/spring-beans-4.3.4.RELEASE-sources.jar!/org/springframework/beans/AbstractPropertyAccessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1275">
+              <caret line="74" column="18" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#4910#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#1520#1521#0" expanded="false" />
+                <element signature="e#1563#1564#0" expanded="false" />
+                <element signature="e#1642#1643#0" expanded="false" />
+                <element signature="e#1695#1696#0" expanded="false" />
+                <element signature="e#1749#1750#0" expanded="false" />
+                <element signature="e#1787#1788#0" expanded="false" />
+                <element signature="e#3959#3960#0" expanded="false" />
+                <element signature="e#3977#3978#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BeanDefinitionValueResolver.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.4.RELEASE/spring-beans-4.3.4.RELEASE-sources.jar!/org/springframework/beans/factory/support/BeanDefinitionValueResolver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7825">
+              <caret line="350" column="49" selection-start-line="350" selection-start-column="49" selection-end-line="350" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#15959#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractApplicationContext.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.4.RELEASE/spring-context-4.3.4.RELEASE-sources.jar!/org/springframework/context/support/AbstractApplicationContext.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24175">
+              <caret line="1080" column="34" selection-start-line="1080" selection-start-column="34" selection-end-line="1080" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#50709#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#9656#9657#0" expanded="false" />
+                <element signature="e#9722#9723#0" expanded="false" />
+                <element signature="e#10427#10428#0" expanded="false" />
+                <element signature="e#10446#10447#0" expanded="false" />
+                <element signature="e#10483#10484#0" expanded="false" />
+                <element signature="e#10504#10505#0" expanded="false" />
+                <element signature="e#10554#10555#0" expanded="false" />
+                <element signature="e#10570#10571#0" expanded="false" />
+                <element signature="e#11078#11079#0" expanded="false" />
+                <element signature="e#11108#11109#0" expanded="false" />
+                <element signature="e#11306#11307#0" expanded="false" />
+                <element signature="e#11331#11332#0" expanded="false" />
+                <element signature="e#12133#12134#0" expanded="false" />
+                <element signature="e#12170#12171#0" expanded="false" />
+                <element signature="e#12572#12573#0" expanded="false" />
+                <element signature="e#12602#12603#0" expanded="false" />
+                <element signature="e#13012#13013#0" expanded="false" />
+                <element signature="e#13044#13045#0" expanded="false" />
+                <element signature="e#13493#13494#0" expanded="false" />
+                <element signature="e#13525#13526#0" expanded="false" />
+                <element signature="e#18331#18332#0" expanded="false" />
+                <element signature="e#18375#18376#0" expanded="false" />
+                <element signature="e#18858#18859#0" expanded="false" />
+                <element signature="e#18897#18898#0" expanded="false" />
+                <element signature="e#19145#19146#0" expanded="false" />
+                <element signature="e#19184#19185#0" expanded="false" />
+                <element signature="e#33221#33222#0" expanded="false" />
+                <element signature="e#33285#33286#0" expanded="false" />
+                <element signature="e#34736#34737#0" expanded="false" />
+                <element signature="e#34765#34766#0" expanded="false" />
+                <element signature="e#36345#36346#0" expanded="false" />
+                <element signature="e#36359#36360#0" expanded="false" />
+                <element signature="e#39013#39014#0" expanded="false" />
+                <element signature="e#39056#39057#0" expanded="false" />
+                <element signature="e#39570#39571#0" expanded="false" />
+                <element signature="e#39601#39602#0" expanded="false" />
+                <element signature="e#41510#41511#0" expanded="false" />
+                <element signature="e#41559#41560#0" expanded="false" />
+                <element signature="e#42528#42529#0" expanded="false" />
+                <element signature="e#42575#42576#0" expanded="false" />
+                <element signature="e#42845#42846#0" expanded="false" />
+                <element signature="e#42908#42909#0" expanded="false" />
+                <element signature="e#42959#42960#0" expanded="false" />
+                <element signature="e#43014#43015#0" expanded="false" />
+                <element signature="e#43070#43071#0" expanded="false" />
+                <element signature="e#43125#43126#0" expanded="false" />
+                <element signature="e#45070#45071#0" expanded="false" />
+                <element signature="e#45095#45096#0" expanded="false" />
+                <element signature="e#45156#45157#0" expanded="false" />
+                <element signature="e#45210#45211#0" expanded="false" />
+                <element signature="e#48100#48101#0" expanded="false" />
+                <element signature="e#48186#48187#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BeanFactory.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.4.RELEASE/spring-beans-4.3.4.RELEASE-sources.jar!/org/springframework/beans/factory/BeanFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3075">
+              <caret line="138" column="11" selection-start-line="138" selection-start-column="11" selection-end-line="138" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#17299#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultSingletonBeanRegistry.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.4.RELEASE/spring-beans-4.3.4.RELEASE-sources.jar!/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="640">
+              <caret line="245" column="21" selection-start-line="245" selection-start-column="21" selection-end-line="245" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BasBusinessInfoController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/controller/BasBusinessInfoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BasEventInfoController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/controller/BasEventInfoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="64" column="41" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list-recommendation.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/common/util/ExcelUtil.java" />
+        <option value="$PROJECT_DIR$/target/search-webapp-service/WEB-INF/views/person-detail.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/impl/IInvestcomInfoDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/IInvestcomInfoDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/impl/InvestcomInfoDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/service/IInvestcomInfoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/service/impl/InvestcomInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/service/impl/IOrgEventService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/service/IBasEventInfoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/service/impl/BasEventInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/IBasEventInfoDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/controller/ProGameInfoController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/controller/BasPersonInfoController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/gsdata-detail.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/po/OrgEventPo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/service/IOrgEventService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/po/SqlVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/IOrgEventDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/impl/OrgEventDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/mapper/OrgEventMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/mapper/OrgEventMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/person-detail.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/org-detail.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/util.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/service/IOrgOrganizeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/service/impl/OrgOrganizeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/IOrgOrganizeDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/impl/OrgOrganizeDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/controller/TupuController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/tupu.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/tupu.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/tupu_css/tupu.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/mapper/EventActivityMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/service/IEventActivityService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/service/impl/EventActivityServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/IEventActivityDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/impl/EventActivityDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/event-detail.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/controller/ListController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/impl/BasEventInfoDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/controller/TestsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/controller/TestController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/controller/BasBusinessInfoController.java" />
+        <option value="$PROJECT_DIR$/target/search-webapp-service/WEB-INF/classes/com/yiguan/search/controller/BasBusinessInfoController.class" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/controller/BasOrganizeInfoController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/service/impl/OrgEventServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SpringContextTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yiguan/search/controller/BasEventInfoController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../maven/apache-maven-3.2.3" />
+        <option name="userSettingsFile" value="D:\develope\maven\apache-maven-3.2.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="search-webapp-service" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="search-webapp-service" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="search-webapp-service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="search-webapp-service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="search-webapp-service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js-jscs-nodeInterpreter" value="D:\develope\nodejs\node.exe" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="SearchEverywhereHistoryKey" value="defaultsingletonb&#9;PSI&#9;JAVA://org.springframework.beans.factory.support.DefaultSingletonBeanRegistry&#10;defaultsin&#9;PSI&#9;JAVA://org.springframework.beans.factory.support.DefaultSingletonBeanRegistry&#10;abstractapplicationcontext&#9;PSI&#9;JAVA://org.springframework.context.support.AbstractApplicationContext" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.yiguan.search.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\develope\Workspaces\IdeaSpaces\search-webapp-service\src\main\java\com\yiguan\search\model" />
+      <recent name="D:\develope\Workspaces\IdeaSpaces\search-webapp-service\src\main\java\com\yiguan\search\mapper" />
+      <recent name="D:\develope\Workspaces\IdeaSpaces\search-webapp-service\src\main\webapp\resources\js" />
+      <recent name="D:\develope\Workspaces\IdeaSpaces\search-webapp-service\src\main\webapp\resources\tupu_css" />
+      <recent name="D:\develope\Workspaces\IdeaSpaces\search-webapp-service\src\main\webapp\WEB-INF\views" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.search">
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="depsClasspath" value="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="search-webapp-service" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="false" name="search" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat8-chafang-80" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="c5fa5c9f-1f68-46a5-b459-a55eada45b06" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="search-webapp-service:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/search-webapp-service" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_search-webapp-service_2" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="50824" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="search-webapp-service:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.search" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fe38b318-35ef-4e32-a9ef-887320b27093" name="Default" comment="" />
+      <created>1506303815723</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1506303815723</updated>
+      <workItem from="1506303818104" duration="22000" />
+      <workItem from="1506303845425" duration="1515000" />
+      <workItem from="1506305627652" duration="357000" />
+      <workItem from="1506306270865" duration="6857000" />
+      <workItem from="1506320108205" duration="784000" />
+      <workItem from="1506491137111" duration="22399000" />
+      <workItem from="1506563423824" duration="905000" />
+      <workItem from="1506566144157" duration="2773000" />
+      <workItem from="1506582801150" duration="4799000" />
+      <workItem from="1506646685068" duration="21681000" />
+      <workItem from="1506733993727" duration="13635000" />
+      <workItem from="1507511195285" duration="28071000" />
+      <workItem from="1507600427937" duration="29289000" />
+      <workItem from="1507700355730" duration="8743000" />
+      <workItem from="1507770475006" duration="6324000" />
+      <workItem from="1507884712495" duration="3955000" />
+      <workItem from="1508118644521" duration="15000" />
+      <workItem from="1508555244720" duration="3970000" />
+      <workItem from="1508570056855" duration="27032000" />
+      <workItem from="1508660164462" duration="4523000" />
+      <workItem from="1508675779006" duration="2117000" />
+      <workItem from="1508679042265" duration="1463000" />
+      <workItem from="1508721309453" duration="558000" />
+      <workItem from="1508724256794" duration="1412000" />
+      <workItem from="1509327703757" duration="672000" />
+      <workItem from="1510105927347" duration="4459000" />
+      <workItem from="1510120974166" duration="867000" />
+      <workItem from="1510132724302" duration="81000" />
+      <workItem from="1510224629403" duration="655000" />
+      <workItem from="1510225729712" duration="810000" />
+      <workItem from="1510226918436" duration="27000" />
+      <workItem from="1510228841442" duration="3944000" />
+      <workItem from="1510243653590" duration="705000" />
+      <workItem from="1510277788628" duration="11882000" />
+      <workItem from="1510311846582" duration="7057000" />
+      <workItem from="1510473426744" duration="11714000" />
+      <workItem from="1510541269830" duration="9389000" />
+      <workItem from="1510558112734" duration="21000" />
+      <workItem from="1510558742985" duration="7731000" />
+      <workItem from="1639147415848" duration="6328000" />
+      <workItem from="1640436029096" duration="2231000" />
+    </task>
+    <task id="LOCAL-00001" summary="代码提交">
+      <created>1640437153329</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1640437153329</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="261772000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22547585" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.49707174" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19106881" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33700788" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28346458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="代码提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="代码提交" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/IComAbnormaloperationDao.java</url>
+          <line>11</line>
+          <properties class="com.yiguan.search.dao.IComAbnormaloperationDao" method="getComAbnormaloperationList" />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="23" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/service/IPerWorkInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/service/IPerKnowledgeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/service/impl/PerKnowledgeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="38" column="41" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/IPerKnowledgeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/impl/PerKnowledgeDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="43" column="56" selection-start-line="42" selection-start-column="8" selection-end-line="43" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/service/IPerOrganizeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/service/impl/PerOrganizeServiceImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="38" column="41" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/IPerOrganizeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/impl/PerOrganizeDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="43" column="56" selection-start-line="38" selection-start-column="8" selection-end-line="43" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/service/IProGameInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/service/impl/ProGameInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1325">
+          <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/IProGameInfoDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="45" column="29" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/impl/ProGameInfoDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="217" column="59" selection-start-line="217" selection-start-column="59" selection-end-line="217" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/controller/BasPersonInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="103" column="63" selection-start-line="88" selection-start-column="8" selection-end-line="103" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/service/IProOtherInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/service/impl/ProOtherInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="64" column="45" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/IProOtherInfoDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/impl/ProOtherInfoDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="79" column="9" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/common/util/URLAvailability.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/controller/ProOtherInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="50" column="57" selection-start-line="47" selection-start-column="8" selection-end-line="50" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/controller/ProGameInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="67" column="32" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/service/IBasEventInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/IBasEventInfoDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/impl/BasEventInfoDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="699">
+          <caret line="136" column="5" selection-start-line="117" selection-start-column="4" selection-end-line="136" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/service/impl/BasEventInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5775">
+          <caret line="231" column="63" selection-start-line="231" selection-start-column="63" selection-end-line="231" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/controller/ListController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7975">
+          <caret line="345" column="67" selection-start-line="345" selection-start-column="67" selection-end-line="345" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/service/IBasKnowledgeInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/service/impl/BasKnowledgeInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1000">
+          <caret line="59" column="48" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1321#1322#0" expanded="false" />
+            <element signature="e#1382#1383#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/IBasKnowledgeInfoDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/dao/impl/BasKnowledgeInfoDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1225">
+          <caret line="69" column="27" selection-start-line="62" selection-start-column="8" selection-end-line="69" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1672#1673#0" expanded="false" />
+            <element signature="e#1731#1732#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/controller/BasKnowledgeInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="51" column="65" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="65" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/knowledge-detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SpringContextTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.4.RELEASE/spring-beans-4.3.4.RELEASE-sources.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="753" column="23" selection-start-line="753" selection-start-column="23" selection-end-line="753" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.4.RELEASE/spring-core-4.3.4.RELEASE-sources.jar!/org/springframework/core/SimpleAliasRegistry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="194" column="18" selection-start-line="194" selection-start-column="18" selection-end-line="194" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.4.RELEASE/spring-beans-4.3.4.RELEASE-sources.jar!/org/springframework/beans/factory/ObjectFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.4.RELEASE/spring-beans-4.3.4.RELEASE-sources.jar!/org/springframework/beans/factory/config/ConfigurableBeanFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="353" column="9" selection-start-line="353" selection-start-column="9" selection-end-line="353" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.4.RELEASE/spring-beans-4.3.4.RELEASE-sources.jar!/org/springframework/beans/PropertyAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4950">
+          <caret line="214" column="9" selection-start-line="214" selection-start-column="9" selection-end-line="214" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.4.RELEASE/spring-beans-4.3.4.RELEASE-sources.jar!/org/springframework/beans/AbstractNestablePropertyAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5175">
+          <caret line="263" column="16" selection-start-line="263" selection-start-column="16" selection-end-line="263" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.4.RELEASE/spring-beans-4.3.4.RELEASE-sources.jar!/org/springframework/beans/AbstractPropertyAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="74" column="18" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#4910#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1520#1521#0" expanded="false" />
+            <element signature="e#1563#1564#0" expanded="false" />
+            <element signature="e#1642#1643#0" expanded="false" />
+            <element signature="e#1695#1696#0" expanded="false" />
+            <element signature="e#1749#1750#0" expanded="false" />
+            <element signature="e#1787#1788#0" expanded="false" />
+            <element signature="e#3959#3960#0" expanded="false" />
+            <element signature="e#3977#3978#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.4.RELEASE/spring-beans-4.3.4.RELEASE-sources.jar!/org/springframework/beans/factory/support/FactoryBeanRegistrySupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1725">
+          <caret line="97" column="21" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#8668#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2363#2364#0" expanded="false" />
+            <element signature="e#2412#2413#0" expanded="false" />
+            <element signature="e#8620#8621#0" expanded="false" />
+            <element signature="e#8663#8664#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.4.RELEASE/spring-beans-4.3.4.RELEASE-sources.jar!/org/springframework/beans/factory/BeanFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3075">
+          <caret line="138" column="11" selection-start-line="138" selection-start-column="11" selection-end-line="138" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#17299#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.4.RELEASE/spring-context-4.3.4.RELEASE-sources.jar!/org/springframework/context/support/AbstractApplicationContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24175">
+          <caret line="1080" column="34" selection-start-line="1080" selection-start-column="34" selection-end-line="1080" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#50709#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#9656#9657#0" expanded="false" />
+            <element signature="e#9722#9723#0" expanded="false" />
+            <element signature="e#10427#10428#0" expanded="false" />
+            <element signature="e#10446#10447#0" expanded="false" />
+            <element signature="e#10483#10484#0" expanded="false" />
+            <element signature="e#10504#10505#0" expanded="false" />
+            <element signature="e#10554#10555#0" expanded="false" />
+            <element signature="e#10570#10571#0" expanded="false" />
+            <element signature="e#11078#11079#0" expanded="false" />
+            <element signature="e#11108#11109#0" expanded="false" />
+            <element signature="e#11306#11307#0" expanded="false" />
+            <element signature="e#11331#11332#0" expanded="false" />
+            <element signature="e#12133#12134#0" expanded="false" />
+            <element signature="e#12170#12171#0" expanded="false" />
+            <element signature="e#12572#12573#0" expanded="false" />
+            <element signature="e#12602#12603#0" expanded="false" />
+            <element signature="e#13012#13013#0" expanded="false" />
+            <element signature="e#13044#13045#0" expanded="false" />
+            <element signature="e#13493#13494#0" expanded="false" />
+            <element signature="e#13525#13526#0" expanded="false" />
+            <element signature="e#18331#18332#0" expanded="false" />
+            <element signature="e#18375#18376#0" expanded="false" />
+            <element signature="e#18858#18859#0" expanded="false" />
+            <element signature="e#18897#18898#0" expanded="false" />
+            <element signature="e#19145#19146#0" expanded="false" />
+            <element signature="e#19184#19185#0" expanded="false" />
+            <element signature="e#33221#33222#0" expanded="false" />
+            <element signature="e#33285#33286#0" expanded="false" />
+            <element signature="e#34736#34737#0" expanded="false" />
+            <element signature="e#34765#34766#0" expanded="false" />
+            <element signature="e#36345#36346#0" expanded="false" />
+            <element signature="e#36359#36360#0" expanded="false" />
+            <element signature="e#39013#39014#0" expanded="false" />
+            <element signature="e#39056#39057#0" expanded="false" />
+            <element signature="e#39570#39571#0" expanded="false" />
+            <element signature="e#39601#39602#0" expanded="false" />
+            <element signature="e#41510#41511#0" expanded="false" />
+            <element signature="e#41559#41560#0" expanded="false" />
+            <element signature="e#42528#42529#0" expanded="false" />
+            <element signature="e#42575#42576#0" expanded="false" />
+            <element signature="e#42845#42846#0" expanded="false" />
+            <element signature="e#42908#42909#0" expanded="false" />
+            <element signature="e#42959#42960#0" expanded="false" />
+            <element signature="e#43014#43015#0" expanded="false" />
+            <element signature="e#43070#43071#0" expanded="false" />
+            <element signature="e#43125#43126#0" expanded="false" />
+            <element signature="e#45070#45071#0" expanded="false" />
+            <element signature="e#45095#45096#0" expanded="false" />
+            <element signature="e#45156#45157#0" expanded="false" />
+            <element signature="e#45210#45211#0" expanded="false" />
+            <element signature="e#48100#48101#0" expanded="false" />
+            <element signature="e#48186#48187#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.4.RELEASE/spring-beans-4.3.4.RELEASE-sources.jar!/org/springframework/beans/factory/support/BeanDefinitionValueResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7825">
+          <caret line="350" column="49" selection-start-line="350" selection-start-column="49" selection-end-line="350" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#15959#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.4.RELEASE/spring-beans-4.3.4.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9000">
+          <caret line="445" column="21" selection-start-line="445" selection-start-column="21" selection-end-line="445" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#69867#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#8166#8167#0" expanded="false" />
+            <element signature="e#8206#8207#0" expanded="false" />
+            <element signature="e#8728#8729#0" expanded="false" />
+            <element signature="e#8770#8771#0" expanded="false" />
+            <element signature="e#10838#10839#0" expanded="false" />
+            <element signature="e#10882#10883#0" expanded="false" />
+            <element signature="e#11483#11484#0" expanded="false" />
+            <element signature="e#11531#11532#0" expanded="false" />
+            <element signature="e#15713#15714#0" expanded="false" />
+            <element signature="e#15791#15792#0" expanded="false" />
+            <element signature="e#44743#44744#0" expanded="false" />
+            <element signature="e#44826#44827#0" expanded="false" />
+            <element signature="e#69839#69840#0" expanded="false" />
+            <element signature="e#69859#69860#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.4.RELEASE/spring-beans-4.3.4.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractBeanFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5650">
+          <caret line="301" column="43" selection-start-line="301" selection-start-column="43" selection-end-line="301" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#66700#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#8637#8638#0" expanded="false" />
+            <element signature="e#8686#8687#0" expanded="false" />
+            <element signature="e#25816#25817#0" expanded="false" />
+            <element signature="e#25852#25853#0" expanded="false" />
+            <element signature="e#26894#26895#0" expanded="false" />
+            <element signature="e#26928#26929#0" expanded="false" />
+            <element signature="e#27003#27004#0" expanded="false" />
+            <element signature="e#27048#27049#0" expanded="false" />
+            <element signature="e#27103#27104#0" expanded="false" />
+            <element signature="e#27137#27138#0" expanded="false" />
+            <element signature="e#27212#27213#0" expanded="false" />
+            <element signature="e#27261#27262#0" expanded="false" />
+            <element signature="e#27313#27314#0" expanded="false" />
+            <element signature="e#27349#27350#0" expanded="false" />
+            <element signature="e#27435#27436#0" expanded="false" />
+            <element signature="e#27480#27481#0" expanded="false" />
+            <element signature="e#27553#27554#0" expanded="false" />
+            <element signature="e#27594#27595#0" expanded="false" />
+            <element signature="e#27679#27680#0" expanded="false" />
+            <element signature="e#27728#27729#0" expanded="false" />
+            <element signature="e#27791#27792#0" expanded="false" />
+            <element signature="e#27827#27828#0" expanded="false" />
+            <element signature="e#28168#28169#0" expanded="false" />
+            <element signature="e#28211#28212#0" expanded="false" />
+            <element signature="e#28615#28616#0" expanded="false" />
+            <element signature="e#28653#28654#0" expanded="false" />
+            <element signature="e#28837#28838#0" expanded="false" />
+            <element signature="e#28869#28870#0" expanded="false" />
+            <element signature="e#28942#28943#0" expanded="false" />
+            <element signature="e#28983#28984#0" expanded="false" />
+            <element signature="e#29170#29171#0" expanded="false" />
+            <element signature="e#29202#29203#0" expanded="false" />
+            <element signature="e#29925#29926#0" expanded="false" />
+            <element signature="e#29977#29978#0" expanded="false" />
+            <element signature="e#30882#30883#0" expanded="false" />
+            <element signature="e#30926#30927#0" expanded="false" />
+            <element signature="e#31099#31100#0" expanded="false" />
+            <element signature="e#31136#31137#0" expanded="false" />
+            <element signature="e#31461#31462#0" expanded="false" />
+            <element signature="e#31519#31520#0" expanded="false" />
+            <element signature="e#31838#31839#0" expanded="false" />
+            <element signature="e#31894#31895#0" expanded="false" />
+            <element signature="e#32717#32718#0" expanded="false" />
+            <element signature="e#32778#32779#0" expanded="false" />
+            <element signature="e#40523#40524#0" expanded="false" />
+            <element signature="e#40594#40595#0" expanded="false" />
+            <element signature="e#48875#48876#0" expanded="false" />
+            <element signature="e#48925#48926#0" expanded="false" />
+            <element signature="e#58310#58311#0" expanded="false" />
+            <element signature="e#58362#58363#0" expanded="false" />
+            <element signature="e#59080#59081#0" expanded="false" />
+            <element signature="e#59124#59125#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.4.RELEASE/spring-beans-4.3.4.RELEASE-sources.jar!/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="245" column="21" selection-start-line="245" selection-start-column="21" selection-end-line="245" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/controller/BasBusinessInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yiguan/search/controller/BasEventInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="64" column="41" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>search-webapp-service:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>search-webapp-service</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

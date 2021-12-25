@@ -1,0 +1,61 @@
+#zuzhiGudong1{
+    top: -150px; left: 50px; height: 46px; width: 46px; display: block;
+}
+#zuzhiGudong2{
+    top: -180px; left: -50px; height: 46px; width: 46px; display: block;
+}
+#zuzhiGudong3{
+    top: -180px; left: 150px; height: 46px; width: 46px; display: block;
+}
+#zuzhiGudong4{
+    top: -140px; left: -150px; height: 46px; width: 46px; display: block;
+}
+#zuzhiGudong5{
+    top: -50px; left: 200px; height: 46px; width: 46px; display: block;
+}
+#zuzhiGudong6{
+    top: 80px; left: 150px; height: 46px; width: 46px; display: block;
+}
+#zuzhiGudong7{
+    top: 200px; left: 100px; height: 46px; width: 46px; display: block;
+}
+#zuzhiGudong8{
+    top: 150px; left: 0px; height: 46px; width: 46px; display: block;
+}
+#zuzhiGudong9{
+    top: 200px; left: -150px; height: 46px; width: 46px; display: block;
+}
+#zuzhiGudong0{
+    top: 50px; left: -200px; height: 46px; width: 46px; display: block;
+}
+
+#zuzhi_gudong1{
+    width: 180px; height: 4px; transform: rotate(4.95rad); top: 120px; left: -90px; transition: all 0.8s ease-in-out 0s; display: block;
+}
+#zuzhi_gudong2{
+    width: 210px; height: 4px; transform: rotate(4.45rad); top: 140px; left: -50px; transition: all 0.8s ease-in-out 0s; display: block;
+}
+#zuzhi_gudong3{
+    width: 230px; height: 4px; transform: rotate(2.2rad); top: 120px; left: -160px; transition: all 0.8s ease-in-out 0s; display: block;
+}
+#zuzhi_gudong4{
+    width: 240px; height: 4px; transform: rotate(3.9rad); top: 120px; left: 0px; transition: all 0.8s ease-in-out 0s; display: block;
+}
+#zuzhi_gudong5{
+    width: 200px; height: 4px; transform: rotate(2.8rad); top: 50px; left: -160px; transition: all 0.8s ease-in-out 0s; display: block;
+}
+#zuzhi_gudong6{
+    width: 180px; height: 4px; transform: rotate(3.65rad); top: -30px; left: -160px; transition: all 0.8s ease-in-out 0s; display: block;
+}
+#zuzhi_gudong7{
+    width: 200px; height: 4px; transform: rotate(4.3rad); top: -60px; left: -110px; transition: all 0.8s ease-in-out 0s; display: block;
+}
+#zuzhi_gudong8{
+    width: 160px; height: 4px; transform: rotate(4.8rad); top: -60px; left: -50px; transition: all 0.8s ease-in-out 0s; display: block;
+}
+#zuzhi_gudong9{
+    width: 260px; height: 4px; transform: rotate(5.45rad); top: -80px; left: -20px; transition: all 0.8s ease-in-out 0s; display: block;
+}
+#zuzhi_gudong0{
+    width: 200px; height: 4px; transform: rotate(6.1rad); top: 5px; left: 20px; transition: all 0.8s ease-in-out 0s; display: block;
+}
